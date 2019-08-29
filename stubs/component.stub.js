@@ -11,7 +11,7 @@ FLAGNAME.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-FLAGNAME.propTypes = {
+FLAGNAME.defaultProps = {
   width: '21',
   height: '15',
 };

@@ -30,7 +30,7 @@ function convertSVGtoComponents(flag, flagName) {
   let flagSVG = fs.readFileSync(`./${inputDir}/${flag}`, 'utf-8');
   flagSVG = flagSVG.replace(
     /<svg (.*) xmlns/gm,
-    '<svg width={width} height={height} {...otherProps} xmlns',
+    '<svg width={width} height={height} viewBox="0 0 21 15" {...otherProps} xmlns',
   );
 
   flagSVG = flagSVG.replace(/xmlns:xlink/gm, 'xmlnsXlink');
