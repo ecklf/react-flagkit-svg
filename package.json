@@ -3,7 +3,44 @@
   "version": "1.0.0",
   "description": "React components for FlagKig (SVG)",
   "main": "index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "format": "prettier --trailing-comma es5 --write 'src/**/*.js'",
+    "compile": "npx svgo inputFiles/*.svg && node build.js && yarn format",
+    "build": "rm -rf build && rollup --config rollup.config.js"
+  },
   "repository": "https://github.com/impulse/react-flagkit-svg",
+  "keywords": [
+    "react",
+    "flag",
+    "flagkit",
+    "svg",
+    "design"
+  ],
   "author": "impulse",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/impulse/react-flagkit-svg/#readme",
+  "bugs": {
+    "url": "https://github.com/impulse/react-flagkit-svg/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "prettier": "^1.18.2",
+    "rollup": "^1.20.3",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0"
+  }
 }
