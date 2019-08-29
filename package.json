@@ -1,0 +1,9 @@
+{
+  "name": "react-flagkit-svg",
+  "version": "1.0.0",
+  "description": "React components for FlagKig (SVG)",
+  "main": "index.js",
+  "repository": "https://github.com/impulse/react-flagkit-svg",
+  "author": "impulse",
+  "license": "MIT"
+}
