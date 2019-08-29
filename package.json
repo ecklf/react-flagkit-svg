@@ -1,7 +1,7 @@
 {
   "name": "react-flagkit-svg",
-  "version": "1.0.0",
-  "description": "React components for FlagKig (SVG)",
+  "version": "1.0.2",
+  "description": "FlagKit for React (uses svg instead of img tags + typings support)",
   "main": "index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,7 +15,13 @@
     "build": "concurrently \"npm:build:*\""
   },
   "repository": "https://github.com/impulse/react-flagkit-svg",
-  "keywords": ["react", "flag", "flagkit", "svg", "design"],
+  "keywords": [
+    "react",
+    "flag",
+    "flagkit",
+    "svg",
+    "design"
+  ],
   "author": "impulse",
   "license": "MIT",
   "homepage": "https://github.com/impulse/react-flagkit-svg/#readme",
