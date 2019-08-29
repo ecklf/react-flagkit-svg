@@ -7,8 +7,9 @@
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
+    "fetch": "rm -rf SVG/ && svn export https://github.com/madebybowtie/FlagKit/trunk/Assets/SVG",
+    "compile": "yarn fetch && npx svgo SVG/*.svg && node build.js && yarn format",
     "format": "prettier --trailing-comma es5 --write 'src/**/*.js'",
-    "compile": "npx svgo inputFiles/*.svg && node build.js && yarn format",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
     "build": "concurrently \"npm:build:*\""

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const inputDir = './inputFiles';
+const inputDir = './SVG';
 
 const outputDirName = 'flags';
 const outputDir = `./src/${outputDirName}`;
