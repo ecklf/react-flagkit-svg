@@ -15,14 +15,6 @@ const NA = props => {
           <stop stop-color="#FFF" offset="0%" />
           <stop stop-color="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="j">
-          <stop stop-color="#1BAC55" offset="0%" />
-          <stop stop-color="#149447" offset="100%" />
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#0C4799" offset="0%" />
-          <stop stop-color="#05387E" offset="100%" />
-        </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
           <stop stop-color="#FFD243" offset="0%" />
           <stop stop-color="#FFCD2F" offset="100%" />
@@ -30,6 +22,14 @@ const NA = props => {
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="m">
           <stop stop-color="#E52347" offset="0%" />
           <stop stop-color="#D01739" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="j">
+          <stop stop-color="#1BAC55" offset="0%" />
+          <stop stop-color="#149447" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
+          <stop stop-color="#0C4799" offset="0%" />
+          <stop stop-color="#05387E" offset="100%" />
         </linearGradient>
         <filter
           x="-3.6%"

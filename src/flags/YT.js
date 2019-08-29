@@ -11,13 +11,13 @@ const YT = props => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="i">
-          <stop stop-color="#E6402C" offset="0%" />
-          <stop stop-color="#D1321F" offset="100%" />
-        </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
           <stop stop-color="#FFF" offset="0%" />
           <stop stop-color="#F0F0F0" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="l">
+          <stop stop-color="#F7E04B" offset="0%" />
+          <stop stop-color="#EAD135" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
           <stop stop-color="#1B2CA9" offset="0%" />
@@ -31,9 +31,9 @@ const YT = props => {
           <stop stop-color="#D0D0D0" offset="0%" />
           <stop stop-color="#C4C4C4" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="l">
-          <stop stop-color="#F7E04B" offset="0%" />
-          <stop stop-color="#EAD135" offset="100%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="i">
+          <stop stop-color="#E6402C" offset="0%" />
+          <stop stop-color="#D1321F" offset="100%" />
         </linearGradient>
         <path
           d="M0 .491A.49.49 0 01.498 0h4.004A.5.5 0 015 .491v5.018a.535.535 0 01-.5.522S3 6 2.5 6.94C2 6 .5 6.03.5 6.03a.54.54 0 01-.5-.522V.491z"
