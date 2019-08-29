@@ -7,6 +7,7 @@ const SZ = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -35,7 +36,7 @@ const SZ = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v3H0zm0 12h21v3H0z" />
+        <path fill="url(#b)" d="M0 0h21v3H0zM0 12h21v3H0z" />
         <path fill="url(#c)" d="M0 3h21v9H0z" />
         <path fill="url(#d)" d="M0 4h21v7H0z" />
         <g transform="translate(6 5)">
@@ -62,7 +63,7 @@ SZ.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-SZ.propTypes = {
+SZ.defaultProps = {
   width: "21",
   height: "15",
 };

@@ -7,6 +7,7 @@ const MX = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -30,7 +31,7 @@ const MX = props => {
         <path fill="url(#c)" d="M0 0h7v15H0z" />
         <path fill="url(#a)" d="M7 0h7v15H7z" />
         <path
-          d="M8 7a2.5 2.5 0 001.247 2.164.5.5 0 00.502-.865A1.499 1.499 0 019 7a.5.5 0 00-1 0zm3.846 2.107A2.498 2.498 0 0013 7a.5.5 0 10-1 0 1.5 1.5 0 01-.693 1.265.5.5 0 10.539.842z"
+          d="M8 7c0 .901.482 1.72 1.247 2.164a.5.5 0 00.502-.865A1.499 1.499 0 019 7a.5.5 0 00-1 0zm3.846 2.107A2.498 2.498 0 0013 7a.5.5 0 10-1 0c0 .518-.264.99-.693 1.265a.5.5 0 10.539.842z"
           fill="#8C9157"
           fill-rule="nonzero"
         />
@@ -45,7 +46,7 @@ MX.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MX.propTypes = {
+MX.defaultProps = {
   width: "21",
   height: "15",
 };

@@ -7,6 +7,7 @@ const PT = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -42,7 +43,7 @@ const PT = props => {
           fill-rule="nonzero"
         />
         <path
-          d="M7 6.256A.25.25 0 017.245 6h1.51A.25.25 0 019 6.256V8a.997.997 0 01-1 1c-.552 0-1-.443-1-.999V6.256z"
+          d="M7 6.256A.25.25 0 017.245 6h1.51A.25.25 0 019 6.256V8A.997.997 0 018 9c-.552 0-1-.443-1-.999V6.256z"
           fill="url(#a)"
         />
         <path
@@ -59,7 +60,7 @@ PT.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-PT.propTypes = {
+PT.defaultProps = {
   width: "21",
   height: "15",
 };

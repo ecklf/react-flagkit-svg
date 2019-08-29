@@ -7,6 +7,7 @@ const CU = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,7 +27,7 @@ const CU = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v3H0zm0 6h21v3H0z" />
+        <path fill="url(#b)" d="M0 0h21v3H0zM0 6h21v3H0z" />
         <path fill="url(#a)" d="M0 3h21v3H0z" />
         <path fill="url(#b)" d="M0 12h21v3H0z" />
         <path fill="url(#a)" d="M0 9h21v3H0z" />
@@ -45,7 +46,7 @@ CU.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CU.propTypes = {
+CU.defaultProps = {
   width: "21",
   height: "15",
 };

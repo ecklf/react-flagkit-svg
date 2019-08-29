@@ -7,6 +7,7 @@ const ZW = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -36,10 +37,10 @@ const ZW = props => {
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path
           fill="url(#b)"
-          d="M0 0h21v2H0zm0 13h21v2H0zm0-9h21v2H0zm0 5h21v2H0z"
+          d="M0 0h21v2H0zM0 13h21v2H0zM0 4h21v2H0zM0 9h21v2H0z"
         />
         <path fill="url(#c)" d="M0 6h21v3H0z" />
-        <path fill="url(#d)" d="M0 2h21v2H0zm0 9h21v2H0z" />
+        <path fill="url(#d)" d="M0 2h21v2H0zM0 11h21v2H0z" />
         <path fill="url(#c)" fill-rule="nonzero" d="M-1 15V0h1l10 7.5L0 15z" />
         <path
           fill="url(#a)"
@@ -60,7 +61,7 @@ ZW.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ZW.propTypes = {
+ZW.defaultProps = {
   width: "21",
   height: "15",
 };

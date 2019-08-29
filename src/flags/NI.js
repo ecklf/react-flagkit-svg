@@ -7,6 +7,7 @@ const NI = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -22,7 +23,7 @@ const NI = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v5H0zm0 10h21v5H0z" />
+        <path fill="url(#b)" d="M0 0h21v5H0zM0 10h21v5H0z" />
         <path fill="url(#a)" d="M0 5h21v5H0z" />
         <path
           d="M10.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm0 .5a2 2 0 110-4 2 2 0 010 4z"
@@ -40,7 +41,7 @@ NI.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-NI.propTypes = {
+NI.defaultProps = {
   width: "21",
   height: "15",
 };

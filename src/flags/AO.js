@@ -7,6 +7,7 @@ const AO = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -38,7 +39,7 @@ const AO = props => {
         <path fill="url(#c)" d="M0 8h21v7H0z" />
         <path fill="url(#d)" d="M0 0h21v8H0z" />
         <path
-          d="M10.63 8.855l-1.407-.939a.5.5 0 01.554-.832l1.536 1.024a2 2 0 00-1.253-2.863.5.5 0 11.259-.966 3 3 0 011.83 4.386l.628.419a.5.5 0 01-.554.832l-.713-.475a2.995 2.995 0 01-2.744.633.5.5 0 01.259-.966c.57.153 1.147.044 1.606-.253zM9.5 6.5a.5.5 0 110-1 .5.5 0 010 1z"
+          d="M10.63 8.855l-1.407-.939a.5.5 0 01.554-.832l1.536 1.024a2 2 0 00-1.253-2.863.5.5 0 11.259-.966 3 3 0 011.83 4.386l.628.419a.5.5 0 01-.554.832l-.713-.475c-.727.631-1.744.901-2.744.633a.5.5 0 01.259-.966c.57.153 1.147.044 1.606-.253zM9.5 6.5a.5.5 0 110-1 .5.5 0 010 1z"
           fill="url(#e)"
           fill-rule="nonzero"
         />
@@ -52,7 +53,7 @@ AO.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-AO.propTypes = {
+AO.defaultProps = {
   width: "21",
   height: "15",
 };

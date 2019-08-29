@@ -7,6 +7,7 @@ const TK = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -33,7 +34,7 @@ const TK = props => {
         />
         <path
           fill="#FFF"
-          d="M4 9l-.707.207L3.5 8.5l-.207-.707L4 8l.707-.207L4.5 8.5l.207.707zm1-6.5l-.707.207L4.5 2l-.207-.707L5 1.5l.707-.207L5.5 2l.207.707zm2 3l-.707.207L6.5 5l-.207-.707L7 4.5l.707-.207L7.5 5l.207.707zm-5 0l-.707.207L1.5 5l-.207-.707L2 4.5l.707-.207L2.5 5l.207.707z"
+          d="M4 9l-.707.207L3.5 8.5l-.207-.707L4 8l.707-.207L4.5 8.5l.207.707zM5 2.5l-.707.207L4.5 2l-.207-.707L5 1.5l.707-.207L5.5 2l.207.707zM7 5.5l-.707.207L6.5 5l-.207-.707L7 4.5l.707-.207L7.5 5l.207.707zM2 5.5l-.707.207L1.5 5l-.207-.707L2 4.5l.707-.207L2.5 5l.207.707z"
         />
       </g>
     </svg>
@@ -45,7 +46,7 @@ TK.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-TK.propTypes = {
+TK.defaultProps = {
   width: "21",
   height: "15",
 };

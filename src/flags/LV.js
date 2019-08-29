@@ -7,6 +7,7 @@ const LV = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -22,7 +23,7 @@ const LV = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v6H0zm0 9h21v6H0z" />
+        <path fill="url(#b)" d="M0 0h21v6H0zM0 9h21v6H0z" />
         <path fill="url(#a)" d="M0 6h21v3H0z" />
       </g>
     </svg>
@@ -34,7 +35,7 @@ LV.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-LV.propTypes = {
+LV.defaultProps = {
   width: "21",
   height: "15",
 };

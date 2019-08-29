@@ -7,6 +7,7 @@ const NZ = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -43,7 +44,7 @@ const NZ = props => {
         <path fill="url(#c)" d="M0 3h4V0h1v3h4v1H5v3H4V4H0z" />
         <path
           fill="#CA1931"
-          d="M15 13l-.707.207.207-.707-.207-.707L15 12l.707-.207-.207.707.207.707zm0-9.5l-.707.207L14.5 3l-.207-.707L15 2.5l.707-.207L15.5 3l.207.707zm3 3l-.707.207L17.5 6l-.207-.707L18 5.5l.707-.207L18.5 6l.207.707zm-6 1l-.707.207L11.5 7l-.207-.707L12 6.5l.707-.207L12.5 7l.207.707z"
+          d="M15 13l-.707.207.207-.707-.207-.707L15 12l.707-.207-.207.707.207.707zM15 3.5l-.707.207L14.5 3l-.207-.707L15 2.5l.707-.207L15.5 3l.207.707zM18 6.5l-.707.207L17.5 6l-.207-.707L18 5.5l.707-.207L18.5 6l.207.707zM12 7.5l-.707.207L11.5 7l-.207-.707L12 6.5l.707-.207L12.5 7l.207.707z"
         />
       </g>
     </svg>
@@ -55,7 +56,7 @@ NZ.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-NZ.propTypes = {
+NZ.defaultProps = {
   width: "21",
   height: "15",
 };

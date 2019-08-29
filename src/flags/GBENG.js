@@ -7,6 +7,7 @@ const GBENG = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -33,7 +34,7 @@ GBENG.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GBENG.propTypes = {
+GBENG.defaultProps = {
   width: "21",
   height: "15",
 };

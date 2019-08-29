@@ -7,6 +7,7 @@ const TL = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -36,7 +37,7 @@ const TL = props => {
         <path
           fill="url(#a)"
           transform="rotate(-30 3.92 7.187)"
-          d="M3.92 8.262l-1.3.928.48-1.524-1.284-.951L3.413 6.7l.507-1.515.508 1.515 1.598.015-1.284.95.48 1.525z"
+          d="M3.92 8.262L2.62 9.19l.48-1.524-1.284-.951L3.413 6.7l.507-1.515.508 1.515 1.598.015-1.284.95.48 1.525z"
         />
       </g>
     </svg>
@@ -48,7 +49,7 @@ TL.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-TL.propTypes = {
+TL.defaultProps = {
   width: "21",
   height: "15",
 };

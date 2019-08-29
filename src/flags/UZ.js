@@ -7,6 +7,7 @@ const UZ = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -30,7 +31,7 @@ const UZ = props => {
         <path fill="url(#c)" d="M0 10h21v5H0z" />
         <path
           fill="url(#a)"
-          d="M0 5h21v5H0zm4.334-3.747a1.5 1.5 0 100 2.495 1.25 1.25 0 110-2.495zM5.5 4a.5.5 0 110-1 .5.5 0 010 1zm2-2a.5.5 0 110-1 .5.5 0 010 1zm2 0a.5.5 0 110-1 .5.5 0 010 1zm0 2a.5.5 0 110-1 .5.5 0 010 1zm-2 0a.5.5 0 110-1 .5.5 0 010 1z"
+          d="M0 5h21v5H0zM4.334 1.253a1.5 1.5 0 100 2.495 1.25 1.25 0 110-2.495zM5.5 4a.5.5 0 110-1 .5.5 0 010 1zm2-2a.5.5 0 110-1 .5.5 0 010 1zm2 0a.5.5 0 110-1 .5.5 0 010 1zm0 2a.5.5 0 110-1 .5.5 0 010 1zm-2 0a.5.5 0 110-1 .5.5 0 010 1z"
         />
       </g>
     </svg>
@@ -42,7 +43,7 @@ UZ.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-UZ.propTypes = {
+UZ.defaultProps = {
   width: "21",
   height: "15",
 };

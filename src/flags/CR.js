@@ -7,6 +7,7 @@ const CR = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,7 +27,7 @@ const CR = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v3H0zm0 12h21v3H0z" />
+        <path fill="url(#b)" d="M0 0h21v3H0zM0 12h21v3H0z" />
         <path fill="url(#a)" d="M0 3h21v9H0z" />
         <path fill="url(#c)" d="M0 5h21v5H0z" />
       </g>
@@ -39,7 +40,7 @@ CR.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CR.propTypes = {
+CR.defaultProps = {
   width: "21",
   height: "15",
 };

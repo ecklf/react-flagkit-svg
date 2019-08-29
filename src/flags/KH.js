@@ -7,6 +7,7 @@ const KH = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,7 +27,7 @@ const KH = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v4H0zm0 11h21v4H0z" />
+        <path fill="url(#b)" d="M0 0h21v4H0zM0 11h21v4H0z" />
         <path fill="url(#c)" d="M0 4h21v7H0z" />
         <path
           d="M7.5 8h1v2h-2l1-2zM9 8h3v2H9V8zm3.5 0h1l1 2h-2V8zm0-1.492A.51.51 0 0113 6a.5.5 0 01.5.508V7.5h-1v-.992zM9 6.545h1v-.547c0-.275.232-.498.5-.498.276 0 .5.222.5.498v.547h1V7.5H9v-.955zm-1.5-.037A.51.51 0 018 6a.5.5 0 01.5.508V7.5h-1v-.992z"
@@ -42,7 +43,7 @@ KH.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-KH.propTypes = {
+KH.defaultProps = {
   width: "21",
   height: "15",
 };

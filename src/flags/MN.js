@@ -7,6 +7,7 @@ const MN = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -31,7 +32,7 @@ const MN = props => {
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M7 0h7v15H7z" />
-        <path fill="url(#c)" d="M0 0h7v15H0zm14 0h7v15h-7z" />
+        <path fill="url(#c)" d="M0 0h7v15H0zM14 0h7v15h-7z" />
         <path
           d="M4 9h1v3H4V9zM2 9h1v3H2V9zm1 2h1l-.5 1-.5-1zm0-2h1l-.5 1L3 9zm0-1l.5-.5.5.5H3zm.5 1a.5.5 0 110-1 .5.5 0 010 1zm0 2a.5.5 0 110-1 .5.5 0 010 1z"
           fill="url(#d)"
@@ -46,7 +47,7 @@ MN.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MN.propTypes = {
+MN.defaultProps = {
   width: "21",
   height: "15",
 };

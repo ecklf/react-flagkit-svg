@@ -7,6 +7,7 @@ const PK = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -56,7 +57,7 @@ PK.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-PK.propTypes = {
+PK.defaultProps = {
   width: "21",
   height: "15",
 };

@@ -7,6 +7,7 @@ const TM = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -42,7 +43,7 @@ const TM = props => {
           <path
             fill="#FBAF29"
             mask="url(#e)"
-            d="M0 0h1.5v1H0zm1.5 1H3v1H1.5z"
+            d="M0 0h1.5v1H0zM1.5 1H3v1H1.5z"
           />
         </g>
         <g transform="translate(3 12)">
@@ -54,7 +55,7 @@ const TM = props => {
           <path
             fill="#FBAF29"
             mask="url(#g)"
-            d="M0 0h1.5v1H0zm1.5 1H3v1H1.5z"
+            d="M0 0h1.5v1H0zM1.5 1H3v1H1.5z"
           />
         </g>
         <g transform="translate(3 7)">
@@ -71,7 +72,7 @@ const TM = props => {
           </mask>
           <use fill="#FBAF29" xlinkHref="#k" />
           <circle fill="#DD404F" mask="url(#l)" cx="1.5" cy="1" r="1" />
-          <path fill="#28AE67" mask="url(#l)" d="M0 0h1v2H0zm2 0h1v2H2z" />
+          <path fill="#28AE67" mask="url(#l)" d="M0 0h1v2H0zM2 0h1v2H2z" />
         </g>
         <path
           d="M11.117 3.179a.5.5 0 10.766.642.5.5 0 00-.766-.642zM9.821 5.117a.5.5 0 10-.642.766.5.5 0 00.642-.766zm-1-1a.5.5 0 10-.642.766.5.5 0 00.642-.766zm2-2a.5.5 0 10-.642.766.5.5 0 00.642-.766zm-.5 1.5a.5.5 0 10-.642.766.5.5 0 00.642-.766z"
@@ -91,7 +92,7 @@ TM.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-TM.propTypes = {
+TM.defaultProps = {
   width: "21",
   height: "15",
 };

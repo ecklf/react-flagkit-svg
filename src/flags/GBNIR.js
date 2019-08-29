@@ -7,6 +7,7 @@ const GBNIR = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -40,7 +41,7 @@ const GBNIR = props => {
           d="M11.516 9.26L10.5 11 9.484 9.26l-2.015-.01.998-1.75-.998-1.75 2.015-.01L10.5 4l1.016 1.74 2.015.01-.998 1.75.998 1.75z"
         />
         <path
-          d="M9.55 7.006a.656.656 0 01.425-.664l.55-.184c.263-.087.475.063.475.35V7.5s.321-1.037.5-.5c.179.537-.128 1.526-.128 1.526a.671.671 0 01-.63.474h-.484a.577.577 0 01-.559-.506l-.148-1.488z"
+          d="M9.55 7.006a.656.656 0 01.425-.664l.55-.184c.263-.087.475.063.475.35V7.5s.321-1.037.5-.5c.179.537-.128 1.526-.128 1.526a.671.671 0 01-.63.474h-.484c-.28 0-.531-.23-.559-.506l-.148-1.488z"
           fill="url(#c)"
         />
         <path
@@ -65,7 +66,7 @@ GBNIR.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GBNIR.propTypes = {
+GBNIR.defaultProps = {
   width: "21",
   height: "15",
 };

@@ -7,6 +7,7 @@ const BM = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -74,7 +75,7 @@ BM.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-BM.propTypes = {
+BM.defaultProps = {
   width: "21",
   height: "15",
 };

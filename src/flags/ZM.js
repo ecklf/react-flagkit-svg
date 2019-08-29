@@ -7,6 +7,7 @@ const ZM = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -56,7 +57,7 @@ ZM.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ZM.propTypes = {
+ZM.defaultProps = {
   width: "21",
   height: "15",
 };

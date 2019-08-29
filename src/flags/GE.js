@@ -7,6 +7,7 @@ const GE = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -24,7 +25,7 @@ const GE = props => {
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z" fill="url(#b)" />
         <path
-          d="M16.2 2.7L16 1.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2zm-12 0L4 1.5h1l-.2 1.2L6 2.5v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1l1.2.2zm0 9L4 10.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1l1.2.2zm12 0l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2z"
+          d="M16.2 2.7L16 1.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2zM4.2 2.7L4 1.5h1l-.2 1.2L6 2.5v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1l1.2.2zM4.2 11.7L4 10.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1l1.2.2zM16.2 11.7l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1l1.2.2z"
           fill="#FD0D1B"
         />
       </g>
@@ -37,7 +38,7 @@ GE.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GE.propTypes = {
+GE.defaultProps = {
   width: "21",
   height: "15",
 };

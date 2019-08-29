@@ -7,6 +7,7 @@ const NA = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
@@ -14,10 +15,6 @@ const NA = props => {
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
           <stop stop-color="#FFF" offset="0%" />
           <stop stop-color="#F0F0F0" offset="100%" />
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
-          <stop stop-color="#FFD243" offset="0%" />
-          <stop stop-color="#FFCD2F" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="m">
           <stop stop-color="#E52347" offset="0%" />
@@ -30,6 +27,10 @@ const NA = props => {
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
           <stop stop-color="#0C4799" offset="0%" />
           <stop stop-color="#05387E" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
+          <stop stop-color="#FFD243" offset="0%" />
+          <stop stop-color="#FFCD2F" offset="100%" />
         </linearGradient>
         <filter
           x="-3.6%"
@@ -146,7 +147,7 @@ NA.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-NA.propTypes = {
+NA.defaultProps = {
   width: "21",
   height: "15",
 };

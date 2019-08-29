@@ -7,6 +7,7 @@ const ES = props => {
     <svg
       width={width}
       height={height}
+      viewBox="0 0 21 15"
       {...otherProps}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,7 +27,7 @@ const ES = props => {
       </defs>
       <g fill="none" fill-rule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v4H0zm0 11h21v4H0z" />
+        <path fill="url(#b)" d="M0 0h21v4H0zM0 11h21v4H0z" />
         <path fill="url(#c)" d="M0 4h21v7H0z" />
         <path fill="#FFEDB1" d="M5.5 7h1v.5h-1z" />
         <path
@@ -36,7 +37,7 @@ const ES = props => {
         />
         <path
           fill="#A41517"
-          d="M4.5 7.5h2V8H6l-.5 1L5 8h-.5zM3 6h1v3.5H3zm4 0h1v3.5H7zm-2.5-.5c0-.276.214-.5.505-.5h.99c.279 0 .505.232.505.5v.248A.248.248 0 016.255 6h-1.51a.245.245 0 01-.245-.252V5.5z"
+          d="M4.5 7.5h2V8H6l-.5 1L5 8h-.5zM3 6h1v3.5H3zM7 6h1v3.5H7zM4.5 5.5c0-.276.214-.5.505-.5h.99c.279 0 .505.232.505.5v.248c0 .139-.108.252-.245.252h-1.51a.245.245 0 01-.245-.252V5.5z"
         />
       </g>
     </svg>
@@ -48,7 +49,7 @@ ES.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ES.propTypes = {
+ES.defaultProps = {
   width: "21",
   height: "15",
 };
