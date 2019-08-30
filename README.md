@@ -5,13 +5,19 @@
 
 #### Why yet another package?
 
-Supports tree shaking and uses svg tags instead of img tags + typings
+- Supports tree shaking
+- Uses svg instead of img tags
+- Adds typings
 
 ### Installation
 
-> yarn add react-flagkit-svg
+```sh
+yarn add react-flagkit-svg
+```
 
-> npm install react-flagkit-svg
+```sh
+npm install react-flagkit-svg
+```
 
 ### Usage
 
@@ -26,16 +32,23 @@ const App = () => {
 export default App;
 ```
 
-Flags can be configured with inline props:
+Flags can be sized - based on height (default: 15)
 
 ```javascript
-<DE width={21} height={15} />
+<DE size={30} />
 ```
 
-It also works great with utility classes like tailwindcss
+You can also distort them by only passing width / height values
 
 ```javascript
-<DE className="h-6" />
+// Add perserveAspectRatio='none' to allow distortion
+<DE width={21} height={15} preserveAspectRatio="none" />
+```
+
+Also works great with utility classes i.e. frameworks like tailwindcss
+
+```javascript
+<DE className="h-12 w-auto rounded-sm" />
 ```
 
 If you can't use ES6 imports, it's possible to include flag from the compiled folder ./dist.

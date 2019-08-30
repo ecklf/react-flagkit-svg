@@ -1,7 +1,7 @@
 {
   "name": "react-flagkit-svg",
-  "version": "1.0.2",
-  "description": "FlagKit for React (uses svg instead of img tags + typings support)",
+  "version": "1.0.3",
+  "description": "Better FlagKit for React (treeshaking, svg tags and typings)",
   "main": "index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
