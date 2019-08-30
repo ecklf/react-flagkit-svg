@@ -16,27 +16,63 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       {...otherProps}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__b"
+        >
           <stop stopColor="#07319C" offset="0%" />
           <stop stopColor="#00247E" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__d">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__d"
+        >
           <stop stopColor="#1F8BDE" offset="0%" />
           <stop stopColor="#1075C2" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__e">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__e"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__g">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__g"
+        >
           <stop stopColor="#187536" offset="0%" />
           <stop stopColor="#0E5023" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FK_svg_prefix__h">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FK_svg_prefix__h"
+        >
           <stop stopColor="#DB1E36" offset="0%" />
           <stop stopColor="#D51931" offset="100%" />
         </linearGradient>
@@ -99,11 +135,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
   size: "15",
   width: "21",
-  height: "15"
+  height: "15",
 };
 export default SvgComponent;

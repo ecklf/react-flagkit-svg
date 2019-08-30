@@ -16,15 +16,33 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       {...otherProps}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BT_svg_prefix__a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BT_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BT_svg_prefix__b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BT_svg_prefix__b"
+        >
           <stop stopColor="#FF5F38" offset="0%" />
           <stop stopColor="#FD5026" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BT_svg_prefix__c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BT_svg_prefix__c"
+        >
           <stop stopColor="#FFD951" offset="0%" />
           <stop stopColor="#FFD43B" offset="100%" />
         </linearGradient>
@@ -41,11 +59,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
   size: "15",
   width: "21",
-  height: "15"
+  height: "15",
 };
 export default SvgComponent;

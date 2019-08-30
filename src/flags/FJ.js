@@ -16,27 +16,60 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       {...otherProps}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FJ_svg_prefix__a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FJ_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FJ_svg_prefix__b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FJ_svg_prefix__b"
+        >
           <stop stopColor="#79CFF6" offset="0%" />
           <stop stopColor="#68BFE6" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FJ_svg_prefix__c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FJ_svg_prefix__c"
+        >
           <stop stopColor="#042C90" offset="0%" />
           <stop stopColor="#00247E" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FJ_svg_prefix__f">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FJ_svg_prefix__f"
+        >
           <stop stopColor="#EB1D43" offset="0%" />
           <stop stopColor="#D21034" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FJ_svg_prefix__g">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="FJ_svg_prefix__g"
+        >
           <stop stopColor="#DB1E36" offset="0%" />
           <stop stopColor="#D51931" offset="100%" />
         </linearGradient>
-        <path d="M0 3.5V0h5v3.5C5 6 2.5 7 2.5 7S0 6 0 3.5z" id="FJ_svg_prefix__d" />
+        <path
+          d="M0 3.5V0h5v3.5C5 6 2.5 7 2.5 7S0 6 0 3.5z"
+          id="FJ_svg_prefix__d"
+        />
         <path
           d="M3.5 3L0 0h.5L4 2.5h1L9 0v.25a.537.537 0 01-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.898.898 0 01-.458-.149L5 4.5H4L0 7v-.5L3.5 4V3z"
           id="FJ_svg_prefix__h"
@@ -81,11 +114,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
   size: "15",
   width: "21",
-  height: "15"
+  height: "15",
 };
 export default SvgComponent;

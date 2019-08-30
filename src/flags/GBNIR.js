@@ -16,19 +16,43 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       {...otherProps}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="GBNIR_svg_prefix__a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GBNIR_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="GBNIR_svg_prefix__b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GBNIR_svg_prefix__b"
+        >
           <stop stopColor="#E82739" offset="0%" />
           <stop stopColor="#CA1A2B" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="GBNIR_svg_prefix__c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GBNIR_svg_prefix__c"
+        >
           <stop stopColor="#E6101E" offset="0%" />
           <stop stopColor="#CA0814" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="GBNIR_svg_prefix__e">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GBNIR_svg_prefix__e"
+        >
           <stop stopColor="#FFD148" offset="0%" />
           <stop stopColor="#FFCB2F" offset="100%" />
         </linearGradient>
@@ -39,7 +63,10 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       </defs>
       <g fill="none" fillRule="evenodd">
         <path fill="url(#GBNIR_svg_prefix__a)" d="M0 0h21v15H0z" />
-        <path d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z" fill="url(#GBNIR_svg_prefix__b)" />
+        <path
+          d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z"
+          fill="url(#GBNIR_svg_prefix__b)"
+        />
         <path
           fill="url(#GBNIR_svg_prefix__a)"
           d="M11.516 9.26L10.5 11 9.484 9.26l-2.015-.01.998-1.75-.998-1.75 2.015-.01L10.5 4l1.016 1.74 2.015.01-.998 1.75.998 1.75z"
@@ -56,7 +83,10 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
         <mask id="GBNIR_svg_prefix__f" fill="#fff">
           <use xlinkHref="#GBNIR_svg_prefix__d" />
         </mask>
-        <use fill="url(#GBNIR_svg_prefix__e)" xlinkHref="#GBNIR_svg_prefix__d" />
+        <use
+          fill="url(#GBNIR_svg_prefix__e)"
+          xlinkHref="#GBNIR_svg_prefix__d"
+        />
         <circle
           fill="#5169E2"
           mask="url(#GBNIR_svg_prefix__f)"
@@ -71,7 +101,13 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           cy={4.5}
           r={1}
         />
-        <circle fill="#D34D43" mask="url(#GBNIR_svg_prefix__f)" cx={9.5} cy={4.5} r={1} />
+        <circle
+          fill="#D34D43"
+          mask="url(#GBNIR_svg_prefix__f)"
+          cx={9.5}
+          cy={4.5}
+          r={1}
+        />
       </g>
     </svg>
   );
@@ -80,11 +116,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
   size: "15",
   width: "21",
-  height: "15"
+  height: "15",
 };
 export default SvgComponent;

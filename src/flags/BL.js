@@ -16,19 +16,43 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
       {...otherProps}
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BL_svg_prefix__a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BL_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BL_svg_prefix__c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BL_svg_prefix__c"
+        >
           <stop stopColor="#216CD3" offset="0%" />
           <stop stopColor="#1557B2" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BL_svg_prefix__d">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BL_svg_prefix__d"
+        >
           <stop stopColor="#F7E14B" offset="0%" />
           <stop stopColor="#F7DF3E" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BL_svg_prefix__f">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="BL_svg_prefix__f"
+        >
           <stop stopColor="#E12539" offset="0%" />
           <stop stopColor="#CA192C" offset="100%" />
         </linearGradient>
@@ -54,7 +78,13 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
             mask="url(#BL_svg_prefix__e)"
             d="M.5 3h7v2h-7z"
           />
-          <circle fill="#FFF" mask="url(#BL_svg_prefix__e)" cx={4} cy={4} r={1} />
+          <circle
+            fill="#FFF"
+            mask="url(#BL_svg_prefix__e)"
+            cx={4}
+            cy={4}
+            r={1}
+          />
         </g>
         <path
           d="M6.5 3.5s2-.5 4-.5 4 .5 4 .5l-.5 2S12.25 5 10.5 5 7 5.5 7 5.5l-.5-2z"
@@ -72,11 +102,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
   size: "15",
   width: "21",
-  height: "15"
+  height: "15",
 };
 export default SvgComponent;
