@@ -24,9 +24,9 @@ function template(
     };
 
     ${componentName}.defaultProps = {
-      size: "25",
-      width: "37",
-      height: "25",
+      size: "15",
+      width: "21",
+      height: "15",
     };
 
     ${exports}

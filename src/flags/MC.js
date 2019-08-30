@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"MC"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MC_svg_linearGradient-1"
+          id="MC_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,45 +31,16 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MC_svg_linearGradient-2"
+          id="MC_svg_prefix__b"
         >
           <stop stopColor="#EA233B" offset="0%" />
           <stop stopColor="#CC162C" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="MC_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="MC_svg_MC">
-          <rect
-            id="MC_svg_FlagBackground"
-            fill="url(#MC_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="MC_svg_Rectangle-2"
-            fill="url(#MC_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={8}
-          />
-          <rect
-            id="MC_svg_Rectangle-2"
-            fill="url(#MC_svg_linearGradient-1)"
-            x={0}
-            y={8}
-            width={21}
-            height={7}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#MC_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#MC_svg_prefix__b)" d="M0 0h21v8H0z" />
+        <path fill="url(#MC_svg_prefix__a)" d="M0 8h21v7H0z" />
       </g>
     </svg>
   );
@@ -83,8 +52,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

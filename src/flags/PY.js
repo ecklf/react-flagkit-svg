@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"PY"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PY_svg_linearGradient-1"
+          id="PY_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PY_svg_linearGradient-2"
+          id="PY_svg_prefix__b"
         >
           <stop stopColor="#E33F39" offset="0%" />
           <stop stopColor="#D32E28" offset="100%" />
@@ -43,60 +41,23 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PY_svg_linearGradient-3"
+          id="PY_svg_prefix__c"
         >
           <stop stopColor="#124BBA" offset="0%" />
           <stop stopColor="#073DA6" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="PY_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="PY_svg_PY">
-          <rect
-            id="PY_svg_FlagBackground"
-            fill="url(#PY_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="PY_svg_Rectangle-2"
-            fill="url(#PY_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="PY_svg_Rectangle-2"
-            fill="url(#PY_svg_linearGradient-3)"
-            x={0}
-            y={10}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="PY_svg_Rectangle-2"
-            fill="url(#PY_svg_linearGradient-1)"
-            x={0}
-            y={5}
-            width={21}
-            height={5}
-          />
-          <path
-            d="M10.5,9 C11.3284271,9 12,8.32842712 12,7.5 C12,6.67157288 11.3284271,6 10.5,6 C9.67157288,6 9,6.67157288 9,7.5 C9,8.32842712 9.67157288,9 10.5,9 Z M10.5,9.5 C9.3954305,9.5 8.5,8.6045695 8.5,7.5 C8.5,6.3954305 9.3954305,5.5 10.5,5.5 C11.6045695,5.5 12.5,6.3954305 12.5,7.5 C12.5,8.6045695 11.6045695,9.5 10.5,9.5 Z"
-            id="PY_svg_Oval-1"
-            fill="#398153"
-            fillRule="nonzero"
-          />
-          <circle id="PY_svg_Oval-29" fill="#E5CF58" cx={10.5} cy={7.5} r={1} />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#PY_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#PY_svg_prefix__b)" d="M0 0h21v5H0z" />
+        <path fill="url(#PY_svg_prefix__c)" d="M0 10h21v5H0z" />
+        <path fill="url(#PY_svg_prefix__a)" d="M0 5h21v5H0z" />
+        <path
+          d="M10.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm0 .5a2 2 0 110-4 2 2 0 010 4z"
+          fill="#398153"
+          fillRule="nonzero"
+        />
+        <circle fill="#E5CF58" cx={10.5} cy={7.5} r={1} />
       </g>
     </svg>
   );
@@ -108,8 +69,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

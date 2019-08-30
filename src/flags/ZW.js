@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"ZW"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ZW_svg_linearGradient-1"
+          id="ZW_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ZW_svg_linearGradient-2"
+          id="ZW_svg_prefix__b"
         >
           <stop stopColor="#369D0C" offset="0%" />
           <stop stopColor="#319209" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ZW_svg_linearGradient-3"
+          id="ZW_svg_prefix__c"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
@@ -53,7 +51,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ZW_svg_linearGradient-4"
+          id="ZW_svg_prefix__d"
         >
           <stop stopColor="#FFD40E" offset="0%" />
           <stop stopColor="#FFD201" offset="100%" />
@@ -63,102 +61,34 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ZW_svg_linearGradient-5"
+          id="ZW_svg_prefix__e"
         >
           <stop stopColor="#F12F1F" offset="0%" />
           <stop stopColor="#DE2010" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="ZW_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="ZW_svg_ZW">
-          <rect
-            id="ZW_svg_FlagBackground"
-            fill="url(#ZW_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={2}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-2)"
-            x={0}
-            y={13}
-            width={21}
-            height={2}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-2)"
-            x={0}
-            y={4}
-            width={21}
-            height={2}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-2)"
-            x={0}
-            y={9}
-            width={21}
-            height={2}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-3)"
-            x={0}
-            y={6}
-            width={21}
-            height={3}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-4)"
-            x={0}
-            y={2}
-            width={21}
-            height={2}
-          />
-          <rect
-            id="ZW_svg_Rectangle-2"
-            fill="url(#ZW_svg_linearGradient-4)"
-            x={0}
-            y={11}
-            width={21}
-            height={2}
-          />
-          <polygon
-            id="ZW_svg_Rectangle-83"
-            fill="url(#ZW_svg_linearGradient-3)"
-            fillRule="nonzero"
-            points="-1 15 -1 0 0 0 10 7.5 0 15"
-          />
-          <polygon
-            id="ZW_svg_Rectangle-83"
-            fill="url(#ZW_svg_linearGradient-1)"
-            fillRule="nonzero"
-            points="0 13.75 8.33333333 7.5 6.66133815e-16 1.25"
-          />
-          <polygon
-            id="ZW_svg_Star-8"
-            fill="url(#ZW_svg_linearGradient-5)"
-            points="3 8.47500004 1.53053687 9.52254249 2.07271986 7.80129158 0.622358709 6.72745751 2.42690936 6.7112084 3 5 3.57309064 6.7112084 5.37764129 6.72745751 3.92728014 7.80129158 4.46946313 9.52254249"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#ZW_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path
+          fill="url(#ZW_svg_prefix__b)"
+          d="M0 0h21v2H0zM0 13h21v2H0zM0 4h21v2H0zM0 9h21v2H0z"
+        />
+        <path fill="url(#ZW_svg_prefix__c)" d="M0 6h21v3H0z" />
+        <path fill="url(#ZW_svg_prefix__d)" d="M0 2h21v2H0zM0 11h21v2H0z" />
+        <path
+          fill="url(#ZW_svg_prefix__c)"
+          fillRule="nonzero"
+          d="M-1 15V0h1l10 7.5L0 15z"
+        />
+        <path
+          fill="url(#ZW_svg_prefix__a)"
+          fillRule="nonzero"
+          d="M0 13.75L8.333 7.5 0 1.25z"
+        />
+        <path
+          fill="url(#ZW_svg_prefix__e)"
+          d="M3 8.475L1.53 9.523 2.074 7.8.623 6.727l1.804-.016L3 5l.573 1.711 1.805.016-1.45 1.074.541 1.722z"
+        />
       </g>
     </svg>
   );
@@ -170,8 +100,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

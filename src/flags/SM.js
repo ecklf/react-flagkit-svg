@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"SM"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SM_svg_linearGradient-1"
+          id="SM_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,59 +31,22 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SM_svg_linearGradient-2"
+          id="SM_svg_prefix__b"
         >
           <stop stopColor="#7CCCF5" offset="0%" />
           <stop stopColor="#62B7E3" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="SM_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="SM_svg_SM">
-          <rect
-            id="SM_svg_FlagBackground"
-            fill="url(#SM_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="SM_svg_Rectangle-2"
-            fill="url(#SM_svg_linearGradient-2)"
-            x={0}
-            y={7}
-            width={21}
-            height={8}
-          />
-          <rect
-            id="SM_svg_Rectangle-2"
-            fill="url(#SM_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={7}
-          />
-          <path
-            d="M8,7 C8,7.90143048 8.48152018,8.71954992 9.24677273,9.16357911 C9.48561975,9.3021674 9.79159152,9.22089165 9.93017981,8.98204463 C10.0687681,8.74319762 9.98749235,8.43722585 9.74864534,8.29863755 C9.28867518,8.03174504 9,7.54127594 9,7 C9,6.72385763 8.77614237,6.5 8.5,6.5 C8.22385763,6.5 8,6.72385763 8,7 Z M11.8455353,9.10731545 C12.5588244,8.65111736 13,7.86294784 13,7 C13,6.72385763 12.7761424,6.5 12.5,6.5 C12.2238576,6.5 12,6.72385763 12,7 C12,7.5182519 11.7356132,7.99058439 11.3067388,8.26487951 C11.0741065,8.41366406 11.0061345,8.72286348 11.1549191,8.95549574 C11.3037036,9.188128 11.612903,9.2561 11.8455353,9.10731545 Z"
-            id="SM_svg_Oval-5"
-            fill="#445F42"
-            fillRule="nonzero"
-          />
-          <ellipse
-            id="SM_svg_Oval-5"
-            fill="#D89F3D"
-            cx={10.5}
-            cy={6.5}
-            rx={1}
-            ry={1.5}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#SM_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#SM_svg_prefix__b)" d="M0 7h21v8H0z" />
+        <path fill="url(#SM_svg_prefix__a)" d="M0 0h21v7H0z" />
+        <path
+          d="M8 7c0 .901.482 1.72 1.247 2.164a.5.5 0 00.502-.865A1.499 1.499 0 019 7a.5.5 0 00-1 0zm3.846 2.107A2.498 2.498 0 0013 7a.5.5 0 10-1 0c0 .518-.264.99-.693 1.265a.5.5 0 10.539.842z"
+          fill="#445F42"
+          fillRule="nonzero"
+        />
+        <ellipse fill="#D89F3D" cx={10.5} cy={6.5} rx={1} ry={1.5} />
       </g>
     </svg>
   );
@@ -97,8 +58,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

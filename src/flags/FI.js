@@ -11,56 +11,23 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"FI"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="FI_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FI_svg_prefix__a">
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="FI_svg_linearGradient-2"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="FI_svg_prefix__b">
           <stop stopColor="#0848A6" offset="0%" />
           <stop stopColor="#003480" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="FI_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="FI_svg_FI">
-          <rect
-            id="FI_svg_FlagBackground"
-            fill="url(#FI_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="FI_svg_Rectangle-2"
-            fill="url(#FI_svg_linearGradient-2)"
-            points="0 9 6 9 6 15 9 15 9 9 21 9 21 6 9 6 9 0 6 0 6 6 0 6"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#FI_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#FI_svg_prefix__b)" d="M0 9h6v6h3V9h12V6H9V0H6v6H0z" />
       </g>
     </svg>
   );
@@ -69,11 +36,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15"
 };
 export default SvgComponent;

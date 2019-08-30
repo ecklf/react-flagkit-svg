@@ -11,81 +11,17 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"GS"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
-          <stop stopColor="#F0F0F0" offset="100%" />
-        </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-2"
-        >
-          <stop stopColor="#07319C" offset="0%" />
-          <stop stopColor="#00247E" offset="100%" />
-        </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-3"
-        >
-          <stop stopColor="#DB1E36" offset="0%" />
-          <stop stopColor="#D51931" offset="100%" />
-        </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-4"
-        >
-          <stop stopColor="#1E1E1E" offset="0%" />
-          <stop stopColor="#000000" offset="100%" />
-        </linearGradient>
-        <ellipse id="GS_svg_path-5" cx={0.5} cy={1.5} rx={1} ry={1.5} />
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-7"
-        >
-          <stop stopColor="#A2ADB0" offset="0%" />
-          <stop stopColor="#8B9497" offset="100%" />
-        </linearGradient>
-        <ellipse id="GS_svg_path-8" cx={0.5} cy={1.5} rx={1} ry={1.5} />
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-10"
-        >
-          <stop stopColor="#4F4F4F" offset="0%" />
-          <stop stopColor="#2B2B2B" offset="100%" />
-        </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-11"
+          id="GS_svg_prefix__k"
         >
           <stop stopColor="#FEC241" offset="0%" />
           <stop stopColor="#FEBB2C" offset="100%" />
@@ -95,61 +31,37 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-12"
+          id="GS_svg_prefix__a"
         >
-          <stop stopColor="#A84B14" offset="0%" />
-          <stop stopColor="#913F0E" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-13"
+          id="GS_svg_prefix__c"
         >
-          <stop stopColor="#CFB063" offset="0%" />
-          <stop stopColor="#BEA157" offset="100%" />
+          <stop stopColor="#DB1E36" offset="0%" />
+          <stop stopColor="#D51931" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-14"
+          id="GS_svg_prefix__e"
         >
-          <stop stopColor="#2D42FF" offset="0%" />
-          <stop stopColor="#0B24FC" offset="100%" />
-        </linearGradient>
-        <linearGradient
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="50%"
-          id="GS_svg_linearGradient-15"
-        >
-          <stop stopColor="#E3DC3D" offset="0%" />
-          <stop stopColor="#CFC82A" offset="100%" />
+          <stop stopColor="#1E1E1E" offset="0%" />
+          <stop offset="100%" />
         </linearGradient>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-16"
-        >
-          <stop stopColor="#7F7D7D" offset="0%" />
-          <stop stopColor="#656263" offset="100%" />
-        </linearGradient>
-        <path
-          d="M0.00681795878,0.505912304 C0.00305250412,0.226504654 0.215752602,0 0.495388985,0 L2.50461102,0 C2.7782068,0 3.00310922,0.230712891 3.00681796,0.505912304 L3.03033777,2.25115061 C3.03218993,2.38858633 2.93416692,2.56561279 2.82278051,2.63904572 L1.7277566,3.36095428 C1.61127373,3.43774711 1.41953181,3.43438721 1.31061945,3.36095428 L0.239917656,2.63904572 C0.126022043,2.56225289 0.0322437286,2.39257813 0.0303377719,2.25115061 L0.00681795878,0.505912304 Z"
-          id="GS_svg_path-17"
-        />
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GS_svg_linearGradient-19"
+          id="GS_svg_prefix__s"
         >
           <stop stopColor="#0F8012" offset="0%" />
           <stop stopColor="#0B6A0D" offset="100%" />
@@ -159,209 +71,193 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GS_svg_linearGradient-20"
+          id="GS_svg_prefix__h"
+        >
+          <stop stopColor="#A2ADB0" offset="0%" />
+          <stop stopColor="#8B9497" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__p"
+        >
+          <stop stopColor="#7F7D7D" offset="0%" />
+          <stop stopColor="#656263" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__i"
+        >
+          <stop stopColor="#4F4F4F" offset="0%" />
+          <stop stopColor="#2B2B2B" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__b"
+        >
+          <stop stopColor="#07319C" offset="0%" />
+          <stop stopColor="#00247E" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__l"
+        >
+          <stop stopColor="#A84B14" offset="0%" />
+          <stop stopColor="#913F0E" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__m"
+        >
+          <stop stopColor="#CFB063" offset="0%" />
+          <stop stopColor="#BEA157" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__n"
+        >
+          <stop stopColor="#2D42FF" offset="0%" />
+          <stop stopColor="#0B24FC" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="50%"
+          id="GS_svg_prefix__o"
+        >
+          <stop stopColor="#E3DC3D" offset="0%" />
+          <stop stopColor="#CFC82A" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GS_svg_prefix__t"
         >
           <stop stopColor="#FFCF44" offset="0%" />
           <stop stopColor="#FCC72E" offset="100%" />
         </linearGradient>
+        <ellipse id="GS_svg_prefix__g" cx={0.5} cy={1.5} rx={1} ry={1.5} />
+        <ellipse id="GS_svg_prefix__d" cx={0.5} cy={1.5} rx={1} ry={1.5} />
+        <path
+          d="M.007.506A.489.489 0 01.495 0h2.01c.273 0 .498.23.502.506L3.03 2.25a.52.52 0 01-.207.388l-1.095.722a.414.414 0 01-.417 0L.24 2.639a.526.526 0 01-.21-.388L.007.506z"
+          id="GS_svg_prefix__q"
+        />
       </defs>
-      <g
-        id="GS_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="GS_svg_GS">
-          <rect
-            id="GS_svg_FlagBackground"
-            fill="url(#GS_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="GS_svg_Mask-Copy"
-            fill="url(#GS_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <path
-            d="M3,3.22996746 L-1.3516287,-0.5 L0.660232527,-0.5 L4.16023253,2 L4.85660189,2 L9.5,-0.902123821 L9.5,0.25 C9.5,0.552509227 9.33308555,0.876533554 9.08215972,1.05576629 L6,3.25730895 L6,3.77003254 L9.13722049,6.45907867 C9.59934261,6.85518335 9.34102897,7.5 8.75,7.5 C8.50478614,7.5 8.2052751,7.40393402 8.00092153,7.25796718 L4.83976747,5 L4.14339811,5 L-0.5,7.90212382 L-0.5,6.24269105 L3,3.74269105 L3,3.22996746 Z"
-            id="GS_svg_Rectangle-36"
-            fill="url(#GS_svg_linearGradient-1)"
-            fillRule="nonzero"
-          />
-          <path
-            d="M3.5,3 L-4.4408921e-16,-2.13162821e-14 L0.5,-2.13162821e-14 L4,2.5 L5,2.5 L9,-2.13162821e-14 L9,0.25 C9,0.388071187 8.91348267,0.561798096 8.79154062,0.648899555 L5.5,3 L5.5,4 L8.8118248,6.83870697 C8.91575109,6.92778665 8.8840332,7 8.75,7 L8.75,7 C8.61192881,7 8.41348267,6.9382019 8.29154062,6.85110044 L5,4.5 L4,4.5 L-4.4408921e-16,7 L-4.4408921e-16,6.5 L3.5,4 L3.5,3 Z"
-            id="GS_svg_Rectangle-36"
-            fill="url(#GS_svg_linearGradient-3)"
-          />
-          <path
-            d="M-4.4408921e-16,2.5 L-4.4408921e-16,4.5 L3.5,4.5 L3.5,7.00461102 C3.5,7.2782068 3.71403503,7.5 4.00468445,7.5 L4.99531555,7.5 C5.27404508,7.5 5.5,7.2842474 5.5,7.00461102 L5.5,4.5 L9.00952148,4.5 C9.28040529,4.5 9.5,4.28596497 9.5,3.99531555 L9.5,3.00468445 C9.5,2.72595492 9.28494263,2.5 9.00952148,2.5 L5.5,2.5 L5.5,-2.13162821e-14 L3.5,-2.13162821e-14 L3.5,2.5 L-4.4408921e-16,2.5 Z"
-            id="GS_svg_Rectangle-2"
-            fill="url(#GS_svg_linearGradient-1)"
-          />
-          <polygon
-            id="GS_svg_Rectangle-36"
-            fill="url(#GS_svg_linearGradient-3)"
-            points="-4.4408921e-16 3 4 3 4 2.5 4 -2.13162821e-14 5 -2.13162821e-14 5 2.5 5 3 9 3 9 4 5 4 5 4.5 5 7 4 7 4 4.5 4 4 -4.4408921e-16 4"
-          />
-          <g id="GS_svg_Group-2" transform="translate(18.000000, 8.000000)">
-            <mask id="GS_svg_mask-6" fill="white">
-              <use xlinkHref="#path-5" />
-            </mask>
-            <use
-              id="GS_svg_Oval-13"
-              fill="url(#GS_svg_linearGradient-4)"
-              xlinkHref="#path-5"
-            />
-            <ellipse
-              id="GS_svg_Oval-13-Copy-2"
-              fill="url(#GS_svg_linearGradient-1)"
-              mask="url(#GS_svg_mask-6)"
-              cx={0}
-              cy={2}
-              rx={1}
-              ry={1.5}
-            />
-          </g>
-          <g id="GS_svg_Group-3" transform="translate(14.000000, 8.000000)">
-            <mask id="GS_svg_mask-9" fill="white">
-              <use xlinkHref="#path-8" />
-            </mask>
-            <use
-              id="GS_svg_Oval-13-Copy"
-              fill="url(#GS_svg_linearGradient-7)"
-              xlinkHref="#path-8"
-            />
-            <ellipse
-              id="GS_svg_Oval-13-Copy-3"
-              fill="url(#GS_svg_linearGradient-10)"
-              mask="url(#GS_svg_mask-9)"
-              cx={1}
-              cy={2}
-              rx={1}
-              ry={1.5}
-            />
-          </g>
-          <path
-            d="M16.5,12.5 C17.3284271,13 18,12.7761424 18,12.5 C18,12.2238576 17.3284271,12 16.5,12 C15.6715729,12 15,12.2238576 15,12.5 C15,12.7761424 15.6715729,13 16.5,12.5 Z"
-            id="GS_svg_Oval-2"
-            fill="url(#GS_svg_linearGradient-11)"
-          />
-          <circle
-            id="GS_svg_Oval"
-            fill="url(#GS_svg_linearGradient-1)"
-            cx={18.5}
-            cy={5.5}
-            r={1}
-          />
-          <circle
-            id="GS_svg_Oval-Copy-4"
-            fill="url(#GS_svg_linearGradient-12)"
-            cx={16.5}
-            cy={4.5}
-            r={1}
-          />
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#GS_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#GS_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path
+          d="M3 3.23L-1.352-.5H.66L4.16 2h.697L9.5-.902V.25c0 .303-.167.627-.418.806L6 3.257v.513l3.137 2.69c.462.395.204 1.04-.387 1.04-.245 0-.545-.096-.75-.242L4.84 5h-.697L-.5 7.902v-1.66l3.5-2.5V3.23z"
+          fill="url(#GS_svg_prefix__a)"
+          fillRule="nonzero"
+        />
+        <path
+          d="M3.5 3L0 0h.5L4 2.5h1L9 0v.25a.537.537 0 01-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.898.898 0 01-.458-.149L5 4.5H4L0 7v-.5L3.5 4V3z"
+          fill="url(#GS_svg_prefix__c)"
+        />
+        <path
+          d="M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 00.505-.495V4.5h3.51a.49.49 0 00.49-.505v-.99a.495.495 0 00-.49-.505H5.5V0h-2v2.5H0z"
+          fill="url(#GS_svg_prefix__a)"
+        />
+        <path fill="url(#GS_svg_prefix__c)" d="M0 3h4V0h1v3h4v1H5v3H4V4H0z" />
+        <g transform="translate(18 8)">
+          <mask id="GS_svg_prefix__f" fill="#fff">
+            <use xlinkHref="#GS_svg_prefix__d" />
+          </mask>
+          <use fill="url(#GS_svg_prefix__e)" xlinkHref="#GS_svg_prefix__d" />
           <ellipse
-            id="GS_svg_Oval-Copy-8"
-            fill="url(#GS_svg_linearGradient-13)"
-            cx={16.5}
-            cy={3.75}
+            fill="url(#GS_svg_prefix__a)"
+            mask="url(#GS_svg_prefix__f)"
+            cy={2}
             rx={1}
-            ry={1}
+            ry={1.5}
           />
-          <circle
-            id="GS_svg_Oval-Copy-6"
-            fill="url(#GS_svg_linearGradient-1)"
-            cx={16.5}
-            cy={11.5}
-            r={1}
-          />
-          <circle
-            id="GS_svg_Oval-Copy"
-            fill="url(#GS_svg_linearGradient-1)"
-            cx={14.5}
-            cy={5.5}
-            r={1}
-          />
-          <circle
-            id="GS_svg_Oval-Copy-2"
-            fill="url(#GS_svg_linearGradient-14)"
-            cx={15}
-            cy={6.5}
-            r={1}
-          />
-          <circle
-            id="GS_svg_Oval-Copy-3"
-            fill="url(#GS_svg_linearGradient-14)"
-            cx={18}
-            cy={6.5}
-            r={1}
-          />
+        </g>
+        <g transform="translate(14 8)">
+          <mask id="GS_svg_prefix__j" fill="#fff">
+            <use xlinkHref="#GS_svg_prefix__g" />
+          </mask>
+          <use fill="url(#GS_svg_prefix__h)" xlinkHref="#GS_svg_prefix__g" />
           <ellipse
-            id="GS_svg_Oval-Copy-7"
-            fill="url(#GS_svg_linearGradient-15)"
-            cx={19}
-            cy={8}
+            fill="url(#GS_svg_prefix__i)"
+            mask="url(#GS_svg_prefix__j)"
+            cx={1}
+            cy={2}
             rx={1}
-            ry={1}
+            ry={1.5}
+          />
+        </g>
+        <path
+          d="M16.5 12.5c.828.5 1.5.276 1.5 0s-.672-.5-1.5-.5-1.5.224-1.5.5.672.5 1.5 0z"
+          fill="url(#GS_svg_prefix__k)"
+        />
+        <circle fill="url(#GS_svg_prefix__a)" cx={18.5} cy={5.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__l)" cx={16.5} cy={4.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__m)" cx={16.5} cy={3.75} r={1} />
+        <circle fill="url(#GS_svg_prefix__a)" cx={16.5} cy={11.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__a)" cx={14.5} cy={5.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__n)" cx={15} cy={6.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__n)" cx={18} cy={6.5} r={1} />
+        <circle fill="url(#GS_svg_prefix__o)" cx={19} cy={8} r={1} />
+        <path
+          d="M16 7.5l-.5.5h2l-.5-.5.5-1.5s-.448-1-1-1-1 1-1 1l.5 1.5z"
+          fill="url(#GS_svg_prefix__p)"
+        />
+        <path
+          d="M16.5 6.5s.5-.112.5-.38c0-.008-.5-.12-.5-.12s-.5.112-.5.12c0 .268.5.38.5.38z"
+          fill="#5D0543"
+        />
+        <g transform="translate(15 8)">
+          <mask id="GS_svg_prefix__r" fill="#fff">
+            <use xlinkHref="#GS_svg_prefix__q" />
+          </mask>
+          <use fill="url(#GS_svg_prefix__a)" xlinkHref="#GS_svg_prefix__q" />
+          <circle
+            fill="#225DA4"
+            mask="url(#GS_svg_prefix__r)"
+            cx={2.5}
+            cy={2.5}
+            r={1}
+          />
+          <circle
+            fill="#225DA4"
+            mask="url(#GS_svg_prefix__r)"
+            cx={0.5}
+            cy={1.5}
+            r={1}
           />
           <path
-            d="M16,7.5 L15.5,8 L17.5,8 L17,7.5 L17.5,6 C17.5,6 17.0522847,5 16.5,5 C15.9477153,5 15.5,6 15.5,6 L16,7.5 Z"
-            id="GS_svg_Oval-10"
-            fill="url(#GS_svg_linearGradient-16)"
+            fill="url(#GS_svg_prefix__s)"
+            mask="url(#GS_svg_prefix__r)"
+            d="M0 0h3L1.5 3z"
           />
-          <path
-            d="M16.5,6.5 C16.5,6.5 17,6.38807119 17,6.11999989 C17,6.11192881 16.5,6 16.5,6 C16.5,6 16,6.11192881 16,6.11999989 C16,6.38807119 16.5,6.5 16.5,6.5 Z"
-            id="GS_svg_Oval-4"
-            fill="#5D0543"
+          <circle
+            fill="url(#GS_svg_prefix__t)"
+            mask="url(#GS_svg_prefix__r)"
+            cx={1.5}
+            cy={1.5}
+            r={1}
           />
-          <g id="GS_svg_Group" transform="translate(15.000000, 8.000000)">
-            <mask id="GS_svg_mask-18" fill="white">
-              <use xlinkHref="#path-17" />
-            </mask>
-            <use
-              id="GS_svg_Rectangle-4"
-              fill="url(#GS_svg_linearGradient-1)"
-              xlinkHref="#path-17"
-            />
-            <circle
-              id="GS_svg_Oval-Copy-3"
-              fill="#225DA4"
-              mask="url(#GS_svg_mask-18)"
-              cx={2.5}
-              cy={2.5}
-              r={1}
-            />
-            <circle
-              id="GS_svg_Oval-Copy-5"
-              fill="#225DA4"
-              mask="url(#GS_svg_mask-18)"
-              cx={0.5}
-              cy={1.5}
-              r={1}
-            />
-            <polygon
-              id="GS_svg_Rectangle"
-              fill="url(#GS_svg_linearGradient-19)"
-              mask="url(#GS_svg_mask-18)"
-              points="0 0 3 0 1.5 3"
-            />
-            <ellipse
-              id="GS_svg_Oval-3"
-              fill="url(#GS_svg_linearGradient-20)"
-              mask="url(#GS_svg_mask-18)"
-              cx={1.5}
-              cy={1.5}
-              rx={1}
-              ry={1}
-            />
-          </g>
         </g>
       </g>
     </svg>
@@ -374,8 +270,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

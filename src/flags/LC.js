@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"LC"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LC_svg_linearGradient-1"
+          id="LC_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LC_svg_linearGradient-2"
+          id="LC_svg_prefix__b"
         >
           <stop stopColor="#86D7FF" offset="0%" />
           <stop stopColor="#6BCDFE" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LC_svg_linearGradient-3"
+          id="LC_svg_prefix__c"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
@@ -53,52 +51,18 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LC_svg_linearGradient-4"
+          id="LC_svg_prefix__d"
         >
           <stop stopColor="#FFDA57" offset="0%" />
           <stop stopColor="#FCD036" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="LC_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="LC_svg_LC">
-          <rect
-            id="LC_svg_FlagBackground"
-            fill="url(#LC_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="LC_svg_Mask-Copy"
-            fill="url(#LC_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="LC_svg_Rectangle-320"
-            fill="url(#LC_svg_linearGradient-1)"
-            points="10.5 2 15 13 6 13"
-          />
-          <polygon
-            id="LC_svg_Rectangle-320"
-            fill="url(#LC_svg_linearGradient-3)"
-            points="10.5 4 14 13 7 13"
-          />
-          <polygon
-            id="LC_svg_Rectangle-320"
-            fill="url(#LC_svg_linearGradient-4)"
-            points="10.5 7 15 13 6 13"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#LC_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#LC_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path fill="url(#LC_svg_prefix__a)" d="M10.5 2L15 13H6z" />
+        <path fill="url(#LC_svg_prefix__c)" d="M10.5 4l3.5 9H7z" />
+        <path fill="url(#LC_svg_prefix__d)" d="M10.5 7l4.5 6H6z" />
       </g>
     </svg>
   );
@@ -110,8 +74,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

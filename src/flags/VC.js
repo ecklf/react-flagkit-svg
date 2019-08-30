@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"VC"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="VC_svg_linearGradient-1"
+          id="VC_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="VC_svg_linearGradient-2"
+          id="VC_svg_prefix__b"
         >
           <stop stopColor="#08C47A" offset="0%" />
           <stop stopColor="#009F60" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="VC_svg_linearGradient-3"
+          id="VC_svg_prefix__c"
         >
           <stop stopColor="#0C87E1" offset="0%" />
           <stop stopColor="#0073C7" offset="100%" />
@@ -53,7 +51,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="VC_svg_linearGradient-4"
+          id="VC_svg_prefix__d"
         >
           <stop stopColor="#FFD147" offset="0%" />
           <stop stopColor="#FECA2F" offset="100%" />
@@ -63,58 +61,21 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="VC_svg_linearGradient-5"
+          id="VC_svg_prefix__e"
         >
           <stop stopColor="#00C778" offset="0%" />
           <stop stopColor="#009F60" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="VC_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="VC_svg_VC">
-          <rect
-            id="VC_svg_FlagBackground"
-            fill="url(#VC_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="VC_svg_Mask"
-            fill="url(#VC_svg_linearGradient-2)"
-            x={10}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <rect
-            id="VC_svg_Rectangle-2"
-            fill="url(#VC_svg_linearGradient-3)"
-            x={0}
-            y={0}
-            width={7}
-            height={15}
-          />
-          <rect
-            id="VC_svg_Rectangle-2-Copy"
-            fill="url(#VC_svg_linearGradient-4)"
-            x={6}
-            y={0}
-            width={9}
-            height={15}
-          />
-          <path
-            d="M11,6 L12.5,3 L14,6 L12.5,9 L11,6 Z M7,6 L8.5,3 L10,6 L8.5,9 L7,6 Z M9,10 L10.5,7 L12,10 L10.5,13 L9,10 Z"
-            id="VC_svg_Rectangle-1194"
-            fill="url(#VC_svg_linearGradient-5)"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#VC_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#VC_svg_prefix__b)" d="M10 0h11v15H10z" />
+        <path fill="url(#VC_svg_prefix__c)" d="M0 0h7v15H0z" />
+        <path fill="url(#VC_svg_prefix__d)" d="M6 0h9v15H6z" />
+        <path
+          d="M11 6l1.5-3L14 6l-1.5 3L11 6zM7 6l1.5-3L10 6 8.5 9 7 6zm2 4l1.5-3 1.5 3-1.5 3L9 10z"
+          fill="url(#VC_svg_prefix__e)"
+        />
       </g>
     </svg>
   );
@@ -126,8 +87,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

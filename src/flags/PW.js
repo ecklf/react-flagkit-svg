@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"PW"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PW_svg_linearGradient-1"
+          id="PW_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PW_svg_linearGradient-2"
+          id="PW_svg_prefix__b"
         >
           <stop stopColor="#65C6EE" offset="0%" />
           <stop stopColor="#4FAED5" offset="100%" />
@@ -43,44 +41,16 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PW_svg_linearGradient-3"
+          id="PW_svg_prefix__c"
         >
           <stop stopColor="#FFE044" offset="0%" />
           <stop stopColor="#FFDD32" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="PW_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="PW_svg_PW">
-          <rect
-            id="PW_svg_FlagBackground"
-            fill="url(#PW_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="PW_svg_Mask-Copy"
-            fill="url(#PW_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <circle
-            id="PW_svg_Oval-9"
-            fill="url(#PW_svg_linearGradient-3)"
-            cx={9.5}
-            cy={7.5}
-            r={4.5}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#PW_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#PW_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <circle fill="url(#PW_svg_prefix__c)" cx={9.5} cy={7.5} r={4.5} />
       </g>
     </svg>
   );
@@ -92,8 +62,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

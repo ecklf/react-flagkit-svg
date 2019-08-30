@@ -13,7 +13,7 @@
     "compile": "yarn fetch && rm -rf src/ && node -r esm bin/build.js && yarn format",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
-    "build": "concurrently \"npm:build:*\"",
+    "build": "concurrently \"yarn:build:*\"",
     "deploy": "yarn compile && yarn build"
   },
   "repository": "https://github.com/impulse/react-flagkit-svg",

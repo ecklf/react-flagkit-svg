@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"PF"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-1"
+          id="PF_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-2"
+          id="PF_svg_prefix__b"
         >
           <stop stopColor="#E02639" offset="0%" />
           <stop stopColor="#CA1A2C" offset="100%" />
@@ -43,18 +41,17 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-3"
+          id="PF_svg_prefix__c"
         >
           <stop stopColor="#DC2235" offset="0%" />
           <stop stopColor="#CA1A2C" offset="100%" />
         </linearGradient>
-        <circle id="PF_svg_path-4" cx={2.5} cy={2.5} r={2.5} />
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-6"
+          id="PF_svg_prefix__e"
         >
           <stop stopColor="#FFA135" offset="0%" />
           <stop stopColor="#FD9C2D" offset="100%" />
@@ -64,7 +61,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-7"
+          id="PF_svg_prefix__g"
         >
           <stop stopColor="#DF2034" offset="0%" />
           <stop stopColor="#CA1A2C" offset="100%" />
@@ -74,94 +71,43 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PF_svg_linearGradient-8"
+          id="PF_svg_prefix__h"
         >
           <stop stopColor="#0B4BAD" offset="0%" />
           <stop stopColor="#08429A" offset="100%" />
         </linearGradient>
+        <circle id="PF_svg_prefix__d" cx={2.5} cy={2.5} r={2.5} />
       </defs>
-      <g
-        id="PF_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="PF_svg_PF">
-          <rect
-            id="PF_svg_FlagBackground"
-            fill="url(#PF_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#PF_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#PF_svg_prefix__b)" d="M0 0h21v4H0z" />
+        <path fill="url(#PF_svg_prefix__c)" d="M0 11h21v4H0z" />
+        <path fill="url(#PF_svg_prefix__a)" d="M0 4h21v7H0z" />
+        <g transform="translate(8 5)">
+          <mask id="PF_svg_prefix__f" fill="#fff">
+            <use xlinkHref="#PF_svg_prefix__d" />
+          </mask>
+          <path
+            fill="url(#PF_svg_prefix__e)"
+            mask="url(#PF_svg_prefix__f)"
+            d="M0 0h5v2.5H0z"
           />
-          <rect
-            id="PF_svg_Rectangle-2"
-            fill="url(#PF_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={4}
+          <path
+            fill="#FFF"
+            mask="url(#PF_svg_prefix__f)"
+            d="M1 1.5h3l-.5 1h-2z"
           />
-          <rect
-            id="PF_svg_Rectangle-2"
-            fill="url(#PF_svg_linearGradient-3)"
-            x={0}
-            y={11}
-            width={21}
-            height={4}
+          <path
+            d="M2 0h1v1.495A.508.508 0 012.5 2a.495.495 0 01-.5-.505V0zM1 1s.75 1.5 1.5 1.5S4 1 4 1v1c0 .552-.443 1-.999 1H1.999A.997.997 0 011 2V1z"
+            fill="url(#PF_svg_prefix__g)"
+            mask="url(#PF_svg_prefix__f)"
           />
-          <rect
-            id="PF_svg_Rectangle-2"
-            fill="url(#PF_svg_linearGradient-1)"
-            x={0}
-            y={4}
-            width={21}
-            height={7}
+          <path
+            fill="url(#PF_svg_prefix__h)"
+            mask="url(#PF_svg_prefix__f)"
+            d="M0 3h5v2H0z"
           />
-          <g id="PF_svg_Group" transform="translate(8.000000, 5.000000)">
-            <mask id="PF_svg_mask-5" fill="white">
-              <use xlinkHref="#path-4" />
-            </mask>
-            <g id="PF_svg_Oval-1" />
-            <rect
-              id="PF_svg_Rectangle-1362"
-              fill="url(#PF_svg_linearGradient-6)"
-              mask="url(#PF_svg_mask-5)"
-              x={0}
-              y={0}
-              width={5}
-              height={2.5}
-            />
-            <polygon
-              id="PF_svg_Rectangle-1364-Copy"
-              fill="#FFFFFF"
-              mask="url(#PF_svg_mask-5)"
-              points="1 1.5 4 1.5 3.5 2.5 1.5 2.5"
-            />
-            <path
-              d="M2,0 L3,0 L3,1.49531555 C3,1.77404508 2.76806641,2 2.5,2 C2.22385763,2 2,1.78596497 2,1.49531555 L2,0 Z M1,1 C1,1 1.75,2.5 2.5,2.5 C3.25,2.5 4,1 4,1 L4,2 C4,2.55228475 3.55733967,3 3.00104344,3 L1.99895656,3 C1.44724809,3 1,2.55613518 1,2 L1,1 Z"
-              id="PF_svg_Combined-Shape"
-              fill="url(#PF_svg_linearGradient-7)"
-              mask="url(#PF_svg_mask-5)"
-            />
-            <rect
-              id="PF_svg_Rectangle-1362-Copy"
-              fill="url(#PF_svg_linearGradient-8)"
-              mask="url(#PF_svg_mask-5)"
-              x={0}
-              y={3}
-              width={5}
-              height={2}
-            />
-            <polygon
-              id="PF_svg_Rectangle-1364"
-              fill="#FFFFFF"
-              mask="url(#PF_svg_mask-5)"
-              points="0 3.5 5 3.5 5 4 0 4"
-            />
-          </g>
+          <path fill="#FFF" mask="url(#PF_svg_prefix__f)" d="M0 3.5h5V4H0z" />
         </g>
       </g>
     </svg>
@@ -174,8 +120,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

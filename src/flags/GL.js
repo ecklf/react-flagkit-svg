@@ -11,31 +11,38 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"GL"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GL_svg_linearGradient-1"
+          id="GL_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <rect id="GL_svg_path-2" x={0} y={0} width={21} height={8} />
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="GL_svg_prefix__d"
+        >
+          <stop stopColor="#E82245" offset="0%" />
+          <stop stopColor="#CC1838" offset="100%" />
+        </linearGradient>
         <filter
           x="-3.6%"
           y="-9.4%"
           width="107.1%"
           height="118.8%"
           filterUnits="objectBoundingBox"
-          id="GL_svg_filter-3"
+          id="GL_svg_prefix__b"
         >
           <feMorphology
             radius={0.25}
@@ -43,69 +50,27 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
             in="SourceAlpha"
             result="shadowSpreadOuter1"
           />
-          <feOffset
-            dx={0}
-            dy={0}
-            in="shadowSpreadOuter1"
-            result="shadowOffsetOuter1"
-          />
+          <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1" />
           <feColorMatrix
-            values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"
-            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
             in="shadowOffsetOuter1"
           />
         </filter>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="GL_svg_linearGradient-4"
-        >
-          <stop stopColor="#E82245" offset="0%" />
-          <stop stopColor="#CC1838" offset="100%" />
-        </linearGradient>
+        <path id="GL_svg_prefix__c" d="M0 0h21v8H0z" />
       </defs>
-      <g
-        id="GL_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="GL_svg_GL">
-          <rect
-            id="GL_svg_FlagBackground"
-            fill="url(#GL_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <g id="GL_svg_Rectangle-2">
-            <use
-              fill="black"
-              fillOpacity={1}
-              filter="url(#GL_svg_filter-3)"
-              xlinkHref="#path-2"
-            />
-            <use
-              fill="url(#GL_svg_linearGradient-1)"
-              fillRule="evenodd"
-              xlinkHref="#path-2"
-            />
-          </g>
-          <path
-            d="M3,8 L0,8 L0,15 L21,15 L21,8 L11,8 C11,5.790861 9.209139,4 7,4 C4.790861,4 3,5.790861 3,8 Z"
-            id="GL_svg_Combined-Shape"
-            fill="url(#GL_svg_linearGradient-4)"
-          />
-          <path
-            d="M3,8 C3,10.209139 4.790861,12 7,12 C9.209139,12 11,10.209139 11,8 L3,8 Z"
-            id="GL_svg_Combined-Shape"
-            fill="url(#GL_svg_linearGradient-1)"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#GL_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <use
+          fill="#000"
+          filter="url(#GL_svg_prefix__b)"
+          xlinkHref="#GL_svg_prefix__c"
+        />
+        <use fill="url(#GL_svg_prefix__a)" xlinkHref="#GL_svg_prefix__c" />
+        <path
+          d="M3 8H0v7h21V8H11a4 4 0 10-8 0z"
+          fill="url(#GL_svg_prefix__d)"
+        />
+        <path d="M3 8a4 4 0 108 0H3z" fill="url(#GL_svg_prefix__a)" />
       </g>
     </svg>
   );
@@ -117,8 +82,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

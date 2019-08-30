@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"TL"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TL_svg_linearGradient-1"
+          id="TL_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TL_svg_linearGradient-2"
+          id="TL_svg_prefix__b"
         >
           <stop stopColor="#FF323E" offset="0%" />
           <stop stopColor="#FD0D1B" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TL_svg_linearGradient-3"
+          id="TL_svg_prefix__c"
         >
           <stop stopColor="#FFCC51" offset="0%" />
           <stop stopColor="#FFC63C" offset="100%" />
@@ -53,53 +51,22 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TL_svg_linearGradient-4"
+          id="TL_svg_prefix__d"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="TL_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="TL_svg_TL">
-          <rect
-            id="TL_svg_FlagBackground"
-            fill="url(#TL_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="TL_svg_Mask-Copy"
-            fill="url(#TL_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="TL_svg_Rectangle-83"
-            fill="url(#TL_svg_linearGradient-3)"
-            points="0 0 13 7.5 0 15"
-          />
-          <polygon
-            id="TL_svg_Rectangle-83"
-            fill="url(#TL_svg_linearGradient-4)"
-            points="0 0 9 7.5 0 15"
-          />
-          <polygon
-            id="TL_svg_Star-8"
-            fill="url(#TL_svg_linearGradient-1)"
-            transform="translate(3.920454, 7.187336) rotate(-30.000000) translate(-3.920454, -7.187336) "
-            points="3.92045417 8.26230472 2.61898766 9.1900867 3.09918549 7.6656181 1.81463712 6.7145503 3.41288221 6.70015886 3.92045417 5.18458466 4.42802612 6.70015886 6.02627121 6.7145503 4.74172284 7.6656181 5.22192067 9.1900867"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#TL_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#TL_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path fill="url(#TL_svg_prefix__c)" d="M0 0l13 7.5L0 15z" />
+        <path fill="url(#TL_svg_prefix__d)" d="M0 0l9 7.5L0 15z" />
+        <path
+          fill="url(#TL_svg_prefix__a)"
+          transform="rotate(-30 3.92 7.187)"
+          d="M3.92 8.262L2.62 9.19l.48-1.524-1.284-.951L3.413 6.7l.507-1.515.508 1.515 1.598.015-1.284.95.48 1.525z"
+        />
       </g>
     </svg>
   );
@@ -111,8 +78,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"TK"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TK_svg_linearGradient-1"
+          id="TK_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TK_svg_linearGradient-2"
+          id="TK_svg_prefix__b"
         >
           <stop stopColor="#0637C5" offset="0%" />
           <stop stopColor="#002CAA" offset="100%" />
@@ -43,62 +41,23 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TK_svg_linearGradient-3"
+          id="TK_svg_prefix__c"
         >
           <stop stopColor="#FDD33F" offset="0%" />
           <stop stopColor="#FED02F" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="TK_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="TK_svg_TK">
-          <rect
-            id="TK_svg_FlagBackground"
-            fill="url(#TK_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="TK_svg_Mask-Copy"
-            fill="url(#TK_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <path
-            d="M4,12 L19,12 L19,13 L3,13 L4,12 Z M11.5,6 C14.5,4 18,2 18,2 C18,2 16.3573445,5.07344524 16.5,6.5 C16.6906779,8.40677857 19,11 19,11 L5,11 C5,11 8.5,8 11.5,6 Z"
-            id="TK_svg_Combined-Shape"
-            fill="url(#TK_svg_linearGradient-3)"
-          />
-          <polygon
-            id="TK_svg_Star-2"
-            fill="#FFFFFF"
-            points="4 9 3.29289322 9.20710678 3.5 8.5 3.29289322 7.79289322 4 8 4.70710678 7.79289322 4.5 8.5 4.70710678 9.20710678"
-          />
-          <polygon
-            id="TK_svg_Star-2"
-            fill="#FFFFFF"
-            points="5 2.5 4.29289322 2.70710678 4.5 2 4.29289322 1.29289322 5 1.5 5.70710678 1.29289322 5.5 2 5.70710678 2.70710678"
-          />
-          <polygon
-            id="TK_svg_Star-2"
-            fill="#FFFFFF"
-            points="7 5.5 6.29289322 5.70710678 6.5 5 6.29289322 4.29289322 7 4.5 7.70710678 4.29289322 7.5 5 7.70710678 5.70710678"
-          />
-          <polygon
-            id="TK_svg_Star-2"
-            fill="#FFFFFF"
-            points="2 5.5 1.29289322 5.70710678 1.5 5 1.29289322 4.29289322 2 4.5 2.70710678 4.29289322 2.5 5 2.70710678 5.70710678"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#TK_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#TK_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path
+          d="M4 12h15v1H3l1-1zm7.5-6c3-2 6.5-4 6.5-4s-1.643 3.073-1.5 4.5C16.69 8.407 19 11 19 11H5s3.5-3 6.5-5z"
+          fill="url(#TK_svg_prefix__c)"
+        />
+        <path
+          fill="#FFF"
+          d="M4 9l-.707.207L3.5 8.5l-.207-.707L4 8l.707-.207L4.5 8.5l.207.707zM5 2.5l-.707.207L4.5 2l-.207-.707L5 1.5l.707-.207L5.5 2l.207.707zM7 5.5l-.707.207L6.5 5l-.207-.707L7 4.5l.707-.207L7.5 5l.207.707zM2 5.5l-.707.207L1.5 5l-.207-.707L2 4.5l.707-.207L2.5 5l.207.707z"
+        />
       </g>
     </svg>
   );
@@ -110,8 +69,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

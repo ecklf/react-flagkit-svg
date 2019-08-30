@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"ML"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ML_svg_linearGradient-1"
+          id="ML_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ML_svg_linearGradient-2"
+          id="ML_svg_prefix__b"
         >
           <stop stopColor="#E2233A" offset="0%" />
           <stop stopColor="#CC162C" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ML_svg_linearGradient-3"
+          id="ML_svg_prefix__c"
         >
           <stop stopColor="#2ECB4D" offset="0%" />
           <stop stopColor="#24B441" offset="100%" />
@@ -53,53 +51,17 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="ML_svg_linearGradient-4"
+          id="ML_svg_prefix__d"
         >
           <stop stopColor="#FFD749" offset="0%" />
           <stop stopColor="#FCD036" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="ML_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="ML_svg_ML">
-          <rect
-            id="ML_svg_FlagBackground"
-            fill="url(#ML_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="ML_svg_Mask"
-            fill="url(#ML_svg_linearGradient-2)"
-            x={10}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <rect
-            id="ML_svg_Rectangle-2"
-            fill="url(#ML_svg_linearGradient-3)"
-            x={0}
-            y={0}
-            width={7}
-            height={15}
-          />
-          <rect
-            id="ML_svg_Rectangle-2-Copy"
-            fill="url(#ML_svg_linearGradient-4)"
-            x={7}
-            y={0}
-            width={7}
-            height={15}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#ML_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#ML_svg_prefix__b)" d="M10 0h11v15H10z" />
+        <path fill="url(#ML_svg_prefix__c)" d="M0 0h7v15H0z" />
+        <path fill="url(#ML_svg_prefix__d)" d="M7 0h7v15H7z" />
       </g>
     </svg>
   );
@@ -111,8 +73,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

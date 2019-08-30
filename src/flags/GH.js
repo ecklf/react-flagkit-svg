@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"GH"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GH_svg_linearGradient-1"
+          id="GH_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GH_svg_linearGradient-2"
+          id="GH_svg_prefix__b"
         >
           <stop stopColor="#E71F37" offset="0%" />
           <stop stopColor="#CC162C" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GH_svg_linearGradient-3"
+          id="GH_svg_prefix__c"
         >
           <stop stopColor="#118B56" offset="0%" />
           <stop stopColor="#0B6B41" offset="100%" />
@@ -53,7 +51,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GH_svg_linearGradient-4"
+          id="GH_svg_prefix__d"
         >
           <stop stopColor="#FDD64C" offset="0%" />
           <stop stopColor="#FCD036" offset="100%" />
@@ -63,58 +61,21 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GH_svg_linearGradient-5"
+          id="GH_svg_prefix__e"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="GH_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="GH_svg_GH">
-          <rect
-            id="GH_svg_FlagBackground"
-            fill="url(#GH_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="GH_svg_Rectangle-2"
-            fill="url(#GH_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="GH_svg_Rectangle-2"
-            fill="url(#GH_svg_linearGradient-3)"
-            x={0}
-            y={10}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="GH_svg_Rectangle-2"
-            fill="url(#GH_svg_linearGradient-4)"
-            x={0}
-            y={5}
-            width={21}
-            height={5}
-          />
-          <polygon
-            id="GH_svg_Star-53"
-            fill="url(#GH_svg_linearGradient-5)"
-            points="10.5 8.70877033 9.03053687 9.77254249 9.58815523 8.04627633 8.12235871 6.97745751 9.93644894 6.97433851 10.5 5.25 11.0635511 6.97433851 12.8776413 6.97745751 11.4118448 8.04627633 11.9694631 9.77254249"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#GH_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#GH_svg_prefix__b)" d="M0 0h21v5H0z" />
+        <path fill="url(#GH_svg_prefix__c)" d="M0 10h21v5H0z" />
+        <path fill="url(#GH_svg_prefix__d)" d="M0 5h21v5H0z" />
+        <path
+          fill="url(#GH_svg_prefix__e)"
+          d="M10.5 8.709L9.03 9.773l.558-1.727-1.466-1.069 1.814-.003.564-1.724.564 1.724 1.814.003-1.466 1.07.557 1.726z"
+        />
       </g>
     </svg>
   );
@@ -126,8 +87,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

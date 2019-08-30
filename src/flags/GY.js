@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"GY"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-1"
+          id="GY_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-2"
+          id="GY_svg_prefix__b"
         >
           <stop stopColor="#08C55F" offset="0%" />
           <stop stopColor="#009F49" offset="100%" />
@@ -43,9 +41,9 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-3"
+          id="GY_svg_prefix__c"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -53,7 +51,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-4"
+          id="GY_svg_prefix__d"
         >
           <stop stopColor="#FFD831" offset="0%" />
           <stop stopColor="#FDD117" offset="100%" />
@@ -63,7 +61,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-5"
+          id="GY_svg_prefix__e"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
@@ -73,61 +71,35 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GY_svg_linearGradient-6"
+          id="GY_svg_prefix__f"
         >
           <stop stopColor="#E92034" offset="0%" />
           <stop stopColor="#CE1225" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="GY_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="GY_svg_GY">
-          <rect
-            id="GY_svg_FlagBackground"
-            fill="url(#GY_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="GY_svg_Mask"
-            fill="url(#GY_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="GY_svg_Rectangle-1134"
-            fill="url(#GY_svg_linearGradient-3)"
-            fillRule="nonzero"
-            points="-1 15 -1 0 0 0 21 7 21 8 0 15"
-          />
-          <polygon
-            id="GY_svg_Rectangle-1134"
-            fill="url(#GY_svg_linearGradient-4)"
-            fillRule="nonzero"
-            points="8.8817842e-16 1.05409255 1.99840144e-15 13.9459074 19.3377223 7.5"
-          />
-          <polygon
-            id="GY_svg_Rectangle-1134"
-            fill="url(#GY_svg_linearGradient-5)"
-            fillRule="nonzero"
-            points="-1 15 -1 0 0 0 11.5 7.5 0 15"
-          />
-          <polygon
-            id="GY_svg_Rectangle-1134"
-            fill="url(#GY_svg_linearGradient-6)"
-            fillRule="nonzero"
-            points="0 13.8061278 9.66939597 7.5 0 1.19387219"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#GY_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#GY_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path
+          fill="url(#GY_svg_prefix__c)"
+          fillRule="nonzero"
+          d="M-1 15V0h1l21 7v1L0 15z"
+        />
+        <path
+          fill="url(#GY_svg_prefix__d)"
+          fillRule="nonzero"
+          d="M0 1.054v12.892L19.338 7.5z"
+        />
+        <path
+          fill="url(#GY_svg_prefix__e)"
+          fillRule="nonzero"
+          d="M-1 15V0h1l11.5 7.5L0 15z"
+        />
+        <path
+          fill="url(#GY_svg_prefix__f)"
+          fillRule="nonzero"
+          d="M0 13.806L9.67 7.5 0 1.194z"
+        />
       </g>
     </svg>
   );
@@ -139,8 +111,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

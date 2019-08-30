@@ -6,8 +6,13 @@ export default (componentName, svgCode) => {
     svgr
       .sync(svgCode, {
         template,
-        svgo: false,
-        svgProps: {size: '{size}', width: '{width}', height: '{height}'},
+        svgo: true,
+        svgProps: {
+          size: '{size}',
+          width: '{width}',
+          height: '{height}',
+          viewBox: '0 0 21 15',
+        },
         componentName: componentName,
         plugins: [
           '@svgr/plugin-svgo',
@@ -19,5 +24,6 @@ export default (componentName, svgCode) => {
       // Generate unique id's to prevent conflicts
       .replace(/id="/gm, `id="${componentName}_svg_`)
       .replace(/url\(#/gm, `url(#${componentName}_svg_`)
+      .replace(/xlinkHref="#/gm, `xlinkHref="#${componentName}_svg_`)
   );
 };

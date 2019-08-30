@@ -11,89 +11,45 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"CN"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="CN_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="CN_svg_prefix__a">
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="CN_svg_linearGradient-2"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="CN_svg_prefix__b">
           <stop stopColor="#F1361D" offset="0%" />
           <stop stopColor="#DF2910" offset="100%" />
         </linearGradient>
         <linearGradient
-          x1="37.0590477%"
-          y1="1.70370869%"
-          x2="62.9409523%"
-          y2="98.2962913%"
-          id="CN_svg_linearGradient-3"
+          x1="37.059%"
+          y1="1.704%"
+          x2="62.941%"
+          y2="98.296%"
+          id="CN_svg_prefix__c"
         >
           <stop stopColor="#FFDC42" offset="0%" />
           <stop stopColor="#FDD217" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="CN_svg_linearGradient-4"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="CN_svg_prefix__d">
           <stop stopColor="#FFDC42" offset="0%" />
           <stop stopColor="#FDD217" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="CN_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="CN_svg_CN">
-          <rect
-            id="CN_svg_FlagBackground"
-            fill="url(#CN_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="CN_svg_Mask"
-            fill="url(#CN_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <path
-            d="M10.1294095,4.48296291 L9.5,4.8660254 L9.51703709,4.12940952 L9.1339746,3.5 L9.87059048,3.51703709 L10.5,3.1339746 L10.4829629,3.87059048 L10.8660254,4.5 L10.1294095,4.48296291 Z M8.28081443,2.44939702 L7.55448142,2.32556815 L8.05060298,1.78081443 L8.17443185,1.05448142 L8.71918557,1.55060298 L9.44551858,1.67443185 L8.94939702,2.21918557 L8.82556815,2.94551858 L8.28081443,2.44939702 Z M8.64618585,8.97815238 L8.03052844,9.38294759 L8.02184762,8.64618585 L7.61705241,8.03052844 L8.35381415,8.02184762 L8.96947156,7.61705241 L8.97815238,8.35381415 L9.38294759,8.96947156 L8.64618585,8.97815238 Z M9.91317591,6.99240388 L9.18084796,7.07357644 L9.50759612,6.41317591 L9.42642356,5.68084796 L10.0868241,6.00759612 L10.819152,5.92642356 L10.4924039,6.58682409 L10.5735764,7.31915204 L9.91317591,6.99240388 Z"
-            id="CN_svg_Star-2"
-            fill="url(#CN_svg_linearGradient-3)"
-          />
-          <polygon
-            id="CN_svg_Star-8"
-            fill="url(#CN_svg_linearGradient-4)"
-            points="5 6.17000005 3.23664424 7.42705098 3.88726383 5.3615499 2.14683045 4.07294902 4.31229123 4.05345008 5 2 5.68770877 4.05345008 7.85316955 4.07294902 6.11273617 5.3615499 6.76335576 7.42705098"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#CN_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#CN_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path
+          d="M10.13 4.483l-.63.383.017-.737-.383-.629.737.017.629-.383-.017.737.383.629-.737-.017zM8.28 2.449l-.726-.123.497-.545.123-.727.545.497.727.123-.497.545-.123.727-.545-.497zm.366 6.53l-.615.404-.01-.737-.404-.615.737-.01.615-.404.01.737.404.615-.737.01zm1.267-1.987l-.732.082.327-.66-.082-.733.66.327.733-.082-.327.66.082.733-.66-.327z"
+          fill="url(#CN_svg_prefix__c)"
+        />
+        <path
+          fill="url(#CN_svg_prefix__d)"
+          d="M5 6.17L3.237 7.427l.65-2.065-1.74-1.29 2.165-.019L5 2l.688 2.053 2.165.02-1.74 1.289.65 2.065z"
+        />
       </g>
     </svg>
   );
@@ -102,11 +58,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15"
 };
 export default SvgComponent;

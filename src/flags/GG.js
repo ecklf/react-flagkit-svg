@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"GG"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GG_svg_linearGradient-1"
+          id="GG_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GG_svg_linearGradient-2"
+          id="GG_svg_prefix__b"
         >
           <stop stopColor="#F33349" offset="0%" />
           <stop stopColor="#E51D34" offset="100%" />
@@ -43,39 +41,22 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="GG_svg_linearGradient-3"
+          id="GG_svg_prefix__c"
         >
           <stop stopColor="#FCE24C" offset="0%" />
           <stop stopColor="#F9DC38" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="GG_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="GG_svg_GG">
-          <rect
-            id="GG_svg_FlagBackground"
-            fill="url(#GG_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <path
-            d="M9,6 L0,6 L0,9 L9,9 L9,15 L12,15 L12,9 L21,9 L21,6 L12,6 L12,0 L9,0 L9,6 Z"
-            id="GG_svg_Rectangle-2"
-            fill="url(#GG_svg_linearGradient-2)"
-          />
-          <path
-            d="M10,8 L10,12 L9.5,13 L11.5,13 L11,12 L11,8 L15,8 L16,8.5 L16,6.5 L15,7 L11,7 L11,3 L11.5,2 L9.5,2 L10,3 L10,7 L6,7 L5,6.5 L5,8.5 L6,8 L10,8 Z"
-            id="GG_svg_Combined-Shape"
-            fill="url(#GG_svg_linearGradient-3)"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#GG_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path
+          d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z"
+          fill="url(#GG_svg_prefix__b)"
+        />
+        <path
+          d="M10 8v4l-.5 1h2l-.5-1V8h4l1 .5v-2L15 7h-4V3l.5-1h-2l.5 1v4H6l-1-.5v2L6 8h4z"
+          fill="url(#GG_svg_prefix__c)"
+        />
       </g>
     </svg>
   );
@@ -87,8 +68,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"RU"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="RU_svg_linearGradient-1"
+          id="RU_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="RU_svg_linearGradient-2"
+          id="RU_svg_prefix__b"
         >
           <stop stopColor="#0C47B7" offset="0%" />
           <stop stopColor="#073DA4" offset="100%" />
@@ -43,53 +41,17 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="RU_svg_linearGradient-3"
+          id="RU_svg_prefix__c"
         >
           <stop stopColor="#E53B35" offset="0%" />
           <stop stopColor="#D32E28" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="RU_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="RU_svg_RU">
-          <rect
-            id="RU_svg_FlagBackground"
-            fill="url(#RU_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="RU_svg_Rectangle-2"
-            fill="url(#RU_svg_linearGradient-2)"
-            x={0}
-            y={5}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="RU_svg_Rectangle-2"
-            fill="url(#RU_svg_linearGradient-3)"
-            x={0}
-            y={10}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="RU_svg_Rectangle-2"
-            fill="url(#RU_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={5}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#RU_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#RU_svg_prefix__b)" d="M0 5h21v5H0z" />
+        <path fill="url(#RU_svg_prefix__c)" d="M0 10h21v5H0z" />
+        <path fill="url(#RU_svg_prefix__a)" d="M0 0h21v5H0z" />
       </g>
     </svg>
   );
@@ -101,8 +63,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

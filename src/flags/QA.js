@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"QA"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="QA_svg_linearGradient-1"
+          id="QA_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,42 +31,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="QA_svg_linearGradient-2"
+          id="QA_svg_prefix__b"
         >
           <stop stopColor="#A6264C" offset="0%" />
           <stop stopColor="#8C1E3E" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="QA_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="QA_svg_QA">
-          <rect
-            id="QA_svg_FlagBackground"
-            fill="url(#QA_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="QA_svg_Mask-Copy"
-            fill="url(#QA_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="QA_svg_Rectangle-2-Copy"
-            fill="url(#QA_svg_linearGradient-1)"
-            points="0 15 7.5 15 6 14 7.5 13 6 12 7.5 11 6 10 7.5 9 6 8 7.5 7 6 6 7.5 5 6 4 7.5 3 6 2 7.5 1 6 0 0 0"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#QA_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#QA_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path
+          fill="url(#QA_svg_prefix__a)"
+          d="M0 15h7.5L6 14l1.5-1L6 12l1.5-1L6 10l1.5-1L6 8l1.5-1L6 6l1.5-1L6 4l1.5-1L6 2l1.5-1L6 0H0z"
+        />
       </g>
     </svg>
   );
@@ -80,8 +55,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

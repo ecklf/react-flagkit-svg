@@ -11,82 +11,32 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"BF"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="BF_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BF_svg_prefix__a">
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="BF_svg_linearGradient-2"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BF_svg_prefix__b">
           <stop stopColor="#00B051" offset="0%" />
           <stop stopColor="#009F49" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="BF_svg_linearGradient-3"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="BF_svg_prefix__c">
           <stop stopColor="#FA494B" offset="0%" />
           <stop stopColor="#F02B2D" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="BF_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="BF_svg_BF">
-          <rect
-            id="BF_svg_FlagBackground"
-            fill="url(#BF_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="BF_svg_Rectangle-2"
-            fill="url(#BF_svg_linearGradient-2)"
-            x={0}
-            y={8}
-            width={21}
-            height={7}
-          />
-          <rect
-            id="BF_svg_Rectangle-2"
-            fill="url(#BF_svg_linearGradient-3)"
-            x={0}
-            y={0}
-            width={21}
-            height={8}
-          />
-          <polygon
-            id="BF_svg_Star-8"
-            fill="#FDD216"
-            points="10.5 9.17000005 8.73664424 10.427051 9.38726383 8.3615499 7.64683045 7.07294902 9.81229123 7.05345008 10.5 5 11.1877088 7.05345008 13.3531695 7.07294902 11.6127362 8.3615499 12.2633558 10.427051"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#BF_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#BF_svg_prefix__b)" d="M0 8h21v7H0z" />
+        <path fill="url(#BF_svg_prefix__c)" d="M0 0h21v8H0z" />
+        <path
+          fill="#FDD216"
+          d="M10.5 9.17l-1.763 1.257.65-2.065-1.74-1.29 2.165-.019L10.5 5l.688 2.053 2.165.02-1.74 1.289.65 2.065z"
+        />
       </g>
     </svg>
   );
@@ -95,11 +45,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15"
 };
 export default SvgComponent;

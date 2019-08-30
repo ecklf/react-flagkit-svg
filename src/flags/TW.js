@@ -11,79 +11,50 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"TW"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TW_svg_linearGradient-1"
+          id="TW_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
-          y2="93.7672335%"
-          id="TW_svg_linearGradient-2"
+          y2="93.767%"
+          id="TW_svg_prefix__b"
         >
           <stop stopColor="#FE3030" offset="0%" />
-          <stop stopColor="#FF0000" offset="100%" />
+          <stop stopColor="red" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="TW_svg_linearGradient-3"
+          id="TW_svg_prefix__c"
         >
           <stop stopColor="#0909B6" offset="0%" />
           <stop stopColor="#000096" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="TW_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="TW_svg_TW">
-          <rect
-            id="TW_svg_FlagBackground"
-            fill="url(#TW_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="TW_svg_Rectangle-2"
-            fill="url(#TW_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <polygon
-            id="TW_svg_Rectangle-2"
-            fill="url(#TW_svg_linearGradient-3)"
-            points="0 8 11 8 11 0 0 0"
-          />
-          <polygon
-            id="TW_svg_Star-27"
-            fill="url(#TW_svg_linearGradient-1)"
-            points="5.5 5.25 4.54329142 6.30969883 4.61611652 4.88388348 3.19030117 4.95670858 4.25 4 3.19030117 3.04329142 4.61611652 3.11611652 4.54329142 1.69030117 5.5 2.75 6.45670858 1.69030117 6.38388348 3.11611652 7.80969883 3.04329142 6.75 4 7.80969883 4.95670858 6.38388348 4.88388348 6.45670858 6.30969883"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#TW_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#TW_svg_prefix__b)" d="M0 0h21v15H0z" />
+        <path fill="url(#TW_svg_prefix__c)" d="M0 8h11V0H0z" />
+        <path
+          fill="url(#TW_svg_prefix__a)"
+          d="M5.5 5.25l-.957 1.06.073-1.426-1.426.073L4.25 4l-1.06-.957 1.426.073-.073-1.426.957 1.06.957-1.06-.073 1.426 1.426-.073L6.75 4l1.06.957-1.426-.073.073 1.426z"
+        />
       </g>
     </svg>
   );
@@ -95,8 +66,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

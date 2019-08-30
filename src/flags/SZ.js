@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"SZ"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SZ_svg_linearGradient-1"
+          id="SZ_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SZ_svg_linearGradient-2"
+          id="SZ_svg_prefix__b"
         >
           <stop stopColor="#486BCA" offset="0%" />
           <stop stopColor="#3E5FBA" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SZ_svg_linearGradient-3"
+          id="SZ_svg_prefix__c"
         >
           <stop stopColor="#FFDF20" offset="0%" />
           <stop stopColor="#FFDA00" offset="100%" />
@@ -53,104 +51,53 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SZ_svg_linearGradient-4"
+          id="SZ_svg_prefix__d"
         >
           <stop stopColor="#CF1615" offset="0%" />
           <stop stopColor="#B20D0C" offset="100%" />
         </linearGradient>
-        <ellipse id="SZ_svg_path-5" cx={4.5} cy={2.5} rx={4.5} ry={2.5} />
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="SZ_svg_linearGradient-7"
+          id="SZ_svg_prefix__f"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
+        <ellipse id="SZ_svg_prefix__e" cx={4.5} cy={2.5} rx={4.5} ry={2.5} />
       </defs>
-      <g
-        id="SZ_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="SZ_svg_SZ">
-          <rect
-            id="SZ_svg_FlagBackground"
-            fill="url(#SZ_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#SZ_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#SZ_svg_prefix__b)" d="M0 0h21v3H0zM0 12h21v3H0z" />
+        <path fill="url(#SZ_svg_prefix__c)" d="M0 3h21v9H0z" />
+        <path fill="url(#SZ_svg_prefix__d)" d="M0 4h21v7H0z" />
+        <g transform="translate(6 5)">
+          <mask id="SZ_svg_prefix__g" fill="#fff">
+            <use xlinkHref="#SZ_svg_prefix__e" />
+          </mask>
+          <use fill="url(#SZ_svg_prefix__a)" xlinkHref="#SZ_svg_prefix__e" />
+          <path
+            fill="url(#SZ_svg_prefix__f)"
+            mask="url(#SZ_svg_prefix__g)"
+            transform="matrix(-1 0 0 1 5 0)"
+            d="M0 0h5v5H1z"
           />
-          <rect
-            id="SZ_svg_Rectangle-2"
-            fill="url(#SZ_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={3}
+          <circle
+            fill="#1A1A1A"
+            mask="url(#SZ_svg_prefix__g)"
+            cx={5.5}
+            cy={2.5}
+            r={1}
           />
-          <rect
-            id="SZ_svg_Rectangle-2"
-            fill="url(#SZ_svg_linearGradient-2)"
-            x={0}
-            y={12}
-            width={21}
-            height={3}
+          <circle
+            fill="#F6F6F6"
+            mask="url(#SZ_svg_prefix__g)"
+            cx={3.5}
+            cy={2.5}
+            r={1}
           />
-          <rect
-            id="SZ_svg_Rectangle-2"
-            fill="url(#SZ_svg_linearGradient-3)"
-            x={0}
-            y={3}
-            width={21}
-            height={9}
-          />
-          <rect
-            id="SZ_svg_Rectangle-2-Copy-4"
-            fill="url(#SZ_svg_linearGradient-4)"
-            x={0}
-            y={4}
-            width={21}
-            height={7}
-          />
-          <g id="SZ_svg_Oval-190" transform="translate(6.000000, 5.000000)">
-            <mask id="SZ_svg_mask-6" fill="white">
-              <use xlinkHref="#path-5" />
-            </mask>
-            <use
-              id="SZ_svg_Mask"
-              fill="url(#SZ_svg_linearGradient-1)"
-              xlinkHref="#path-5"
-            />
-            <polygon
-              id="SZ_svg_Rectangle-1180"
-              fill="url(#SZ_svg_linearGradient-7)"
-              mask="url(#SZ_svg_mask-6)"
-              transform="translate(2.500000, 2.500000) scale(-1, 1) translate(-2.500000, -2.500000) "
-              points="0 0 5 0 5 5 1 5"
-            />
-            <circle
-              id="SZ_svg_Oval-191"
-              fill="#1A1A1A"
-              mask="url(#SZ_svg_mask-6)"
-              cx={5.5}
-              cy={2.5}
-              r={1}
-            />
-            <circle
-              id="SZ_svg_Oval-191"
-              fill="#F6F6F6"
-              mask="url(#SZ_svg_mask-6)"
-              cx={3.5}
-              cy={2.5}
-              r={1}
-            />
-          </g>
         </g>
       </g>
     </svg>
@@ -163,8 +110,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

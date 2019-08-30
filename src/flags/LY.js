@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"LY"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LY_svg_linearGradient-1"
+          id="LY_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LY_svg_linearGradient-2"
+          id="LY_svg_prefix__b"
         >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LY_svg_linearGradient-3"
+          id="LY_svg_prefix__c"
         >
           <stop stopColor="#34B857" offset="0%" />
           <stop stopColor="#2B9E4A" offset="100%" />
@@ -53,58 +51,21 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="LY_svg_linearGradient-4"
+          id="LY_svg_prefix__d"
         >
           <stop stopColor="#F41F34" offset="0%" />
           <stop stopColor="#E60B21" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="LY_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="LY_svg_LY">
-          <rect
-            id="LY_svg_FlagBackground"
-            fill="url(#LY_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="LY_svg_Rectangle-2"
-            fill="url(#LY_svg_linearGradient-2)"
-            x={0}
-            y={5}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="LY_svg_Rectangle-2"
-            fill="url(#LY_svg_linearGradient-3)"
-            x={0}
-            y={10}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="LY_svg_Rectangle-2"
-            fill="url(#LY_svg_linearGradient-4)"
-            x={0}
-            y={0}
-            width={21}
-            height={5}
-          />
-          <path
-            d="M11.3335689,6.25274924 C11.3059482,6.25092604 11.2780822,6.25 11.25,6.25 C10.5596441,6.25 10,6.80964406 10,7.5 C10,8.19035594 10.5596441,8.75 11.25,8.75 C11.2780822,8.75 11.3059482,8.74907396 11.3335689,8.74725076 C11.0951725,8.9068934 10.8084594,9 10.5,9 C9.67157288,9 9,8.32842712 9,7.5 C9,6.67157288 9.67157288,6 10.5,6 C10.8084594,6 11.0951725,6.0931066 11.3335689,6.25274924 Z M11.5,8 C11.2238576,8 11,7.77614237 11,7.5 C11,7.22385763 11.2238576,7 11.5,7 C11.7761424,7 12,7.22385763 12,7.5 C12,7.77614237 11.7761424,8 11.5,8 Z"
-            id="LY_svg_Oval-68"
-            fill="url(#LY_svg_linearGradient-1)"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#LY_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#LY_svg_prefix__b)" d="M0 5h21v5H0z" />
+        <path fill="url(#LY_svg_prefix__c)" d="M0 10h21v5H0z" />
+        <path fill="url(#LY_svg_prefix__d)" d="M0 0h21v5H0z" />
+        <path
+          d="M11.334 6.253a1.25 1.25 0 100 2.495 1.5 1.5 0 110-2.495zM11.5 8a.5.5 0 110-1 .5.5 0 010 1z"
+          fill="url(#LY_svg_prefix__a)"
+        />
       </g>
     </svg>
   );
@@ -116,8 +77,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

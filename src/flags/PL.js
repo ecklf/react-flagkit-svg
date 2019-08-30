@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"PL"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PL_svg_linearGradient-1"
+          id="PL_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,45 +31,16 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="PL_svg_linearGradient-2"
+          id="PL_svg_prefix__b"
         >
           <stop stopColor="#EB2A50" offset="0%" />
           <stop stopColor="#DA1B40" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="PL_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="PL_svg_PL">
-          <rect
-            id="PL_svg_FlagBackground"
-            fill="url(#PL_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="PL_svg_Rectangle-2"
-            fill="url(#PL_svg_linearGradient-2)"
-            x={0}
-            y={7}
-            width={21}
-            height={8}
-          />
-          <rect
-            id="PL_svg_Rectangle-2"
-            fill="url(#PL_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={7}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#PL_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#PL_svg_prefix__b)" d="M0 7h21v8H0z" />
+        <path fill="url(#PL_svg_prefix__a)" d="M0 0h21v7H0z" />
       </g>
     </svg>
   );
@@ -83,8 +52,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

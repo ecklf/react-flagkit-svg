@@ -11,80 +11,28 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"CA"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="CA_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="CA_svg_prefix__a">
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="CA_svg_linearGradient-2"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="CA_svg_prefix__b">
           <stop stopColor="#FF3131" offset="0%" />
-          <stop stopColor="#FF0000" offset="100%" />
+          <stop stopColor="red" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="CA_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="CA_svg_CA">
-          <rect
-            id="CA_svg_FlagBackground"
-            fill="url(#CA_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="CA_svg_Mask"
-            fill="url(#CA_svg_linearGradient-2)"
-            x={10}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <rect
-            id="CA_svg_Rectangle-2"
-            fill="url(#CA_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={7}
-            height={15}
-          />
-          <rect
-            id="CA_svg_Rectangle-2-Copy"
-            fill="url(#CA_svg_linearGradient-1)"
-            x={6}
-            y={0}
-            width={9}
-            height={15}
-          />
-          <path
-            d="M11.6741867,7.32581329 L12.3258133,6.67418671 C12.4215317,6.57846832 12.5808177,6.58081774 12.6805115,6.68051147 L13,7 L14,6.5 L13.5,7.5 L13.8194885,7.81948853 C13.921875,7.921875 13.9229621,8.07703795 13.8279309,8.17206907 L12.5,9.5 L11,9.5 L10.75,11 L10.25,11 L10,9.5 L8.5,9.5 L7.17206907,8.17206907 C7.08064651,8.08064651 7.08081774,7.91918226 7.18051147,7.81948853 L7.5,7.5 L7,6.5 L8,7 L8.31948853,6.68051147 C8.421875,6.578125 8.57798604,6.57798604 8.67418671,6.67418671 L9.32581329,7.32581329 C9.42153168,7.42153168 9.47771727,7.38858633 9.45023012,7.25115061 L9,5 L10,5.5 L10.5,4 L11,5.5 L12,5 L11.5497699,7.25115061 C11.5214844,7.39257812 11.577986,7.42201396 11.6741867,7.32581329 Z"
-            id="CA_svg_Combined-Shape"
-            fill="url(#CA_svg_linearGradient-2)"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#CA_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#CA_svg_prefix__b)" d="M10 0h11v15H10zM0 0h7v15H0z" />
+        <path fill="url(#CA_svg_prefix__a)" d="M6 0h9v15H6z" />
+        <path
+          d="M11.674 7.326l.652-.652a.251.251 0 01.355.007L13 7l1-.5-.5 1 .32.32a.247.247 0 01.008.352L12.5 9.5H11l-.25 1.5h-.5L10 9.5H8.5L7.172 8.172a.253.253 0 01.009-.353L7.5 7.5l-.5-1L8 7l.32-.32a.249.249 0 01.354-.006l.652.652c.096.096.152.063.124-.075L9 5l1 .5.5-1.5.5 1.5 1-.5-.45 2.251c-.029.142.028.171.124.075z"
+          fill="url(#CA_svg_prefix__b)"
+        />
       </g>
     </svg>
   );
@@ -93,11 +41,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15"
 };
 export default SvgComponent;

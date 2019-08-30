@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"MT"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MT_svg_linearGradient-1"
+          id="MT_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,59 +31,25 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MT_svg_linearGradient-2"
+          id="MT_svg_prefix__b"
         >
           <stop stopColor="#DE233C" offset="0%" />
           <stop stopColor="#CD1931" offset="100%" />
         </linearGradient>
-        <path
-          d="M4,3 L4,2 L3,2 L3,3 L2,3 L2,4 L3,4 L3,5 L4,5 L4,4 L5,4 L5,3 L4,3 Z"
-          id="MT_svg_path-3"
-        />
+        <path d="M4 3V2H3v1H2v1h1v1h1V4h1V3H4z" id="MT_svg_prefix__c" />
       </defs>
-      <g
-        id="MT_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="MT_svg_MT">
-          <rect
-            id="MT_svg_FlagBackground"
-            fill="url(#MT_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="MT_svg_Rectangle-2-Copy-2"
-            fill="url(#MT_svg_linearGradient-2)"
-            x={11}
-            y={0}
-            width={10}
-            height={15}
-          />
-          <rect
-            id="MT_svg_Rectangle-2"
-            fill="url(#MT_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <g id="MT_svg_Rectangle-364">
-            <use fill="#CCCCCD" fillRule="evenodd" xlinkHref="#path-3" />
-            <path
-              strokeOpacity={0.66}
-              stroke="#7B716A"
-              strokeWidth={0.5}
-              d="M4.25,2.75 L5.25,2.75 L5.25,4.25 L4.25,4.25 L4.25,5.25 L2.75,5.25 L2.75,4.25 L1.75,4.25 L1.75,2.75 L2.75,2.75 L2.75,1.75 L4.25,1.75 L4.25,2.75 Z"
-            />
-          </g>
-          <circle id="MT_svg_Oval-20" fill="#7B716A" cx={3.5} cy={3.5} r={1} />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#MT_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#MT_svg_prefix__b)" d="M11 0h10v15H11z" />
+        <path fill="url(#MT_svg_prefix__a)" d="M0 0h11v15H0z" />
+        <use fill="#CCCCCD" xlinkHref="#MT_svg_prefix__c" />
+        <path
+          strokeOpacity={0.66}
+          stroke="#7B716A"
+          strokeWidth={0.5}
+          d="M4.25 2.75h1v1.5h-1v1h-1.5v-1h-1v-1.5h1v-1h1.5v1z"
+        />
+        <circle fill="#7B716A" cx={3.5} cy={3.5} r={1} />
       </g>
     </svg>
   );
@@ -97,8 +61,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"NG"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="NG_svg_linearGradient-1"
+          id="NG_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,53 +31,16 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="NG_svg_linearGradient-2"
+          id="NG_svg_prefix__b"
         >
           <stop stopColor="#189B62" offset="0%" />
           <stop stopColor="#118653" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="NG_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="NG_svg_NG">
-          <rect
-            id="NG_svg_FlagBackground"
-            fill="url(#NG_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="NG_svg_Mask"
-            fill="url(#NG_svg_linearGradient-2)"
-            x={10}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <rect
-            id="NG_svg_Rectangle-2"
-            fill="url(#NG_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={7}
-            height={15}
-          />
-          <rect
-            id="NG_svg_Rectangle-2-Copy"
-            fill="url(#NG_svg_linearGradient-1)"
-            x={7}
-            y={0}
-            width={7}
-            height={15}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#NG_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#NG_svg_prefix__b)" d="M10 0h11v15H10zM0 0h7v15H0z" />
+        <path fill="url(#NG_svg_prefix__a)" d="M7 0h7v15H7z" />
       </g>
     </svg>
   );
@@ -91,8 +52,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;

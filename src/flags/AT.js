@@ -11,75 +11,24 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"AT"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="AT_svg_linearGradient-1"
-        >
-          <stop stopColor="#FFFFFF" offset="0%" />
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="AT_svg_prefix__a">
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient
-          x1="50%"
-          y1="0%"
-          x2="50%"
-          y2="100%"
-          id="AT_svg_linearGradient-2"
-        >
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="AT_svg_prefix__b">
           <stop stopColor="#F64253" offset="0%" />
           <stop stopColor="#EA2D3F" offset="100%" />
         </linearGradient>
       </defs>
-      <g
-        id="AT_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="AT_svg_AT">
-          <rect
-            id="AT_svg_FlagBackground"
-            fill="url(#AT_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="AT_svg_Rectangle-2"
-            fill="url(#AT_svg_linearGradient-2)"
-            x={0}
-            y={0}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="AT_svg_Rectangle-2"
-            fill="url(#AT_svg_linearGradient-2)"
-            x={0}
-            y={10}
-            width={21}
-            height={5}
-          />
-          <rect
-            id="AT_svg_Rectangle-2"
-            fill="url(#AT_svg_linearGradient-1)"
-            x={0}
-            y={5}
-            width={21}
-            height={5}
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#AT_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#AT_svg_prefix__b)" d="M0 0h21v5H0zM0 10h21v5H0z" />
+        <path fill="url(#AT_svg_prefix__a)" d="M0 5h21v5H0z" />
       </g>
     </svg>
   );
@@ -88,11 +37,11 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
 SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15"
 };
 export default SvgComponent;

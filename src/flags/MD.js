@@ -11,21 +11,19 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
     <svg
       width={width}
       height={height}
-      viewBox="0 0 21 15"
       size={size}
+      viewBox="0 0 21 15"
       {...otherProps}
     >
-      <title>{"MD"}</title>
-      <desc>{"Created with sketchtool."}</desc>
       <defs>
         <linearGradient
           x1="50%"
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MD_svg_linearGradient-1"
+          id="MD_svg_prefix__a"
         >
-          <stop stopColor="#FFFFFF" offset="0%" />
+          <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient
@@ -33,7 +31,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MD_svg_linearGradient-2"
+          id="MD_svg_prefix__b"
         >
           <stop stopColor="#EB1C43" offset="0%" />
           <stop stopColor="#CA1134" offset="100%" />
@@ -43,7 +41,7 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MD_svg_linearGradient-3"
+          id="MD_svg_prefix__c"
         >
           <stop stopColor="#115BCB" offset="0%" />
           <stop stopColor="#094AAC" offset="100%" />
@@ -53,19 +51,18 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
           y1="0%"
           x2="50%"
           y2="100%"
-          id="MD_svg_linearGradient-4"
+          id="MD_svg_prefix__f"
         >
           <stop stopColor="#FFD953" offset="0%" />
           <stop stopColor="#FFD130" offset="100%" />
         </linearGradient>
-        <rect id="MD_svg_path-5" x={7} y={0} width={7} height={15} />
         <filter
           x="-10.7%"
-          y="-5.0%"
+          y="-5%"
           width="121.4%"
-          height="110.0%"
+          height="110%"
           filterUnits="objectBoundingBox"
-          id="MD_svg_filter-6"
+          id="MD_svg_prefix__d"
         >
           <feMorphology
             radius={0.25}
@@ -73,70 +70,28 @@ const SvgComponent = ({ size, width, height, ...otherProps }) => {
             in="SourceAlpha"
             result="shadowSpreadOuter1"
           />
-          <feOffset
-            dx={0}
-            dy={0}
-            in="shadowSpreadOuter1"
-            result="shadowOffsetOuter1"
-          />
+          <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1" />
           <feColorMatrix
-            values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0"
-            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
             in="shadowOffsetOuter1"
           />
         </filter>
+        <path id="MD_svg_prefix__e" d="M7 0h7v15H7z" />
       </defs>
-      <g
-        id="MD_svg_Symbols"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g id="MD_svg_MD">
-          <rect
-            id="MD_svg_FlagBackground"
-            fill="url(#MD_svg_linearGradient-1)"
-            x={0}
-            y={0}
-            width={21}
-            height={15}
-          />
-          <rect
-            id="MD_svg_Mask"
-            fill="url(#MD_svg_linearGradient-2)"
-            x={10}
-            y={0}
-            width={11}
-            height={15}
-          />
-          <rect
-            id="MD_svg_Rectangle-2"
-            fill="url(#MD_svg_linearGradient-3)"
-            x={0}
-            y={0}
-            width={7}
-            height={15}
-          />
-          <g id="MD_svg_Rectangle-2-Copy">
-            <use
-              fill="black"
-              fillOpacity={1}
-              filter="url(#MD_svg_filter-6)"
-              xlinkHref="#path-5"
-            />
-            <use
-              fill="url(#MD_svg_linearGradient-4)"
-              fillRule="evenodd"
-              xlinkHref="#path-5"
-            />
-          </g>
-          <path
-            d="M9,6 L10,6 L10.5,4.5 L11,6 L12,6 L12,9 L10.5,10 L9,9 L9,6 Z M10,7 L10,8.5 L11,8.5 L11,7 L10,7 Z"
-            id="MD_svg_Rectangle-1601"
-            fill="#AF7F59"
-          />
-        </g>
+      <g fill="none" fillRule="evenodd">
+        <path fill="url(#MD_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#MD_svg_prefix__b)" d="M10 0h11v15H10z" />
+        <path fill="url(#MD_svg_prefix__c)" d="M0 0h7v15H0z" />
+        <use
+          fill="#000"
+          filter="url(#MD_svg_prefix__d)"
+          xlinkHref="#MD_svg_prefix__e"
+        />
+        <use fill="url(#MD_svg_prefix__f)" xlinkHref="#MD_svg_prefix__e" />
+        <path
+          d="M9 6h1l.5-1.5L11 6h1v3l-1.5 1L9 9V6zm1 1v1.5h1V7h-1z"
+          fill="#AF7F59"
+        />
       </g>
     </svg>
   );
@@ -148,8 +103,8 @@ SvgComponent.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 SvgComponent.defaultProps = {
-  size: "25",
-  width: "37",
-  height: "25",
+  size: "15",
+  width: "21",
+  height: "15",
 };
 export default SvgComponent;
