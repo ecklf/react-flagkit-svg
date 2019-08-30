@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const BR = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,20 +19,20 @@ const BR = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#05AB41" offset="0%" />
-          <stop stop-color="#019C39" offset="100%" />
+          <stop stopColor="#05AB41" offset="0%" />
+          <stop stopColor="#019C39" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#053087" offset="0%" />
-          <stop stop-color="#012877" offset="100%" />
+          <stop stopColor="#053087" offset="0%" />
+          <stop stopColor="#012877" offset="100%" />
         </linearGradient>
         <circle id="c" cx="3.5" cy="3.5" r="3.5" />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path
@@ -41,7 +47,7 @@ const BR = props => {
           <path
             d="M-.1 2.974c.265-.215 1.463-.04 3.534.512 1.474.394 3.173 1.262 3.562 1.742l.314.388.778-.629-.315-.388c-.55-.68-2.421-1.636-4.081-2.079-2.586-.69-3.758-.86-4.422-.323l-.388.314.629.777.389-.314z"
             fill="#FFF"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             mask="url(#e)"
           />
         </g>
@@ -51,13 +57,15 @@ const BR = props => {
 };
 
 BR.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 BR.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default BR;

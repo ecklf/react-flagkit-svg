@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const USCA = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,19 +19,19 @@ const USCA = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#E7413D" offset="0%" />
-          <stop stop-color="#DB3531" offset="100%" />
+          <stop stopColor="#E7413D" offset="0%" />
+          <stop stopColor="#DB3531" offset="100%" />
         </linearGradient>
         <path
           d="M7.312 6.6c-.15-.14-.144.126-.481.08-.09-.011-.2-.216-.2-.216s-.564-.036-.594-.298c-.03-.262.35-.386.492-.583.111-.156.018-.287.102-.458.084-.171.335-.226.36-.314.016-.054-.133-.264.077-.335.203-.069.391.104.391.104s.001-.242.166-.27c.238-.042.392.166.392.166s1.216-1.007 1.9-1.014c.588-.007.856.363 1.42.423.92.1 1.327-.423 2.261 0 1.195.543 1.27 2.992 1.27 2.992s.301.402.348.623c.045.209 0 .356-.205.521-.204.166-.903.373-1.034.145-.13-.228.61-.399.486-.453-.486-.213-.865-.836-.865-.836s-.518.277-.805.623c-.236.285-.135.666-.49.666-.68 0-.992.066-1.031-.145-.084-.453.882-.118.711-.23-.117-.078-.117-1.327-.117-1.327h-.738s.158 1.437-.114 1.474c-.71.095-.367.084-.96 0-.328-.047.446-.438.446-.438s-.104-.744-.446-.738c-.559.555-1.43 1.58-1.777 1.58-.421 0-.337-.047-.652-.071-.665-.051 0-.558.392-.333.167-.225.758-1.879.758-1.879s-1.076.9-1.463.541z"
           id="c"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 12h21v3H0z" />
         <path fill="url(#a)" d="M0 0h21v12H0z" />
@@ -59,13 +65,15 @@ const USCA = props => {
 };
 
 USCA.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 USCA.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default USCA;

@@ -1,44 +1,46 @@
-const fs = require('fs');
-const inputDir = './SVG';
+const fs = require("fs");
+const inputDir = "./SVG";
 
-const outputDirName = 'flags';
+const outputDirName = "flags";
 const outputDir = `./src/${outputDirName}`;
 
 const dirContents = fs.readdirSync(inputDir);
 
-const jsIndexLogger = fs.createWriteStream('./src/index.js', {
-  flags: 'w',
+const jsIndexLogger = fs.createWriteStream("./src/index.js", {
+  flags: "w"
 });
 
-const typeIndexLogger = fs.createWriteStream('./src/index.d.ts', {
-  flags: 'w',
+const typeIndexLogger = fs.createWriteStream("./src/index.d.ts", {
+  flags: "w"
 });
 
 typeIndexLogger.write(`/// <reference types="react" />\nimport { ComponentType, SVGAttributes } from 'react';\n\ninterface Props extends SVGAttributes<SVGElement> {
 \width?: string | number;\nheight?: string | number;\n}\n\ntype Flag = ComponentType<Props>;\n`);
 
 for (const flag of dirContents) {
-  if (flag.split('.')[1] === 'svg') {
-    const flagName = flag.replace('-', '').split('.')[0];
+  if (flag.split(".")[1] === "svg") {
+    const flagName = flag.replace("-", "").split(".")[0];
     convertSVGtoComponents(flag, flagName);
     convertFlagnameToIndex(flagName);
   }
 }
 
 function convertSVGtoComponents(flag, flagName) {
-  const reactTemplate = fs.readFileSync('./stubs/component.stub.js', 'utf-8');
-  let flagSVG = fs.readFileSync(`./${inputDir}/${flag}`, 'utf-8');
+  const reactTemplate = fs.readFileSync("./stubs/component.stub.js", "utf-8");
+  let flagSVG = fs.readFileSync(`./${inputDir}/${flag}`, "utf-8");
   flagSVG = flagSVG.replace(
     /<svg (.*) xmlns/gm,
-    '<svg width={width} height={height} viewBox="0 0 21 15" {...otherProps} xmlns',
+    '<svg width={width} height={height} viewBox="0 0 21 15" {...otherProps} xmlns'
   );
 
-  flagSVG = flagSVG.replace(/xmlns:xlink/gm, 'xmlnsXlink');
-  flagSVG = flagSVG.replace(/xlink:href/gm, 'xlinkHref');
+  flagSVG = flagSVG.replace(/xmlns:xlink/gm, "xmlnsXlink");
+  flagSVG = flagSVG.replace(/xlink:href/gm, "xlinkHref");
+  flagSVG = flagSVG.replace(/stop-color/gm, "stopColor");
+  flagSVG = flagSVG.replace(/fill-rule/gm, "fillRule");
 
   let flagComponentData = reactTemplate;
   flagComponentData = flagComponentData.replace(/FLAGNAME/g, flagName);
-  flagComponentData = flagComponentData.replace('FLAGSVG', flagSVG);
+  flagComponentData = flagComponentData.replace("FLAGSVG", flagSVG);
 
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
@@ -48,7 +50,7 @@ function convertSVGtoComponents(flag, flagName) {
 
 function convertFlagnameToIndex(flagName) {
   jsIndexLogger.write(
-    `export { default as ${flagName} } from './${outputDirName}/${flagName}';\n`,
+    `export { default as ${flagName} } from './${outputDirName}/${flagName}';\n`
   );
   typeIndexLogger.write(`export const ${flagName}: Flag;\n`);
 }

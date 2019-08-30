@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PM = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,24 +19,24 @@ const PM = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#138E16" offset="0%" />
-          <stop stop-color="#0F7F12" offset="100%" />
+          <stop stopColor="#138E16" offset="0%" />
+          <stop stopColor="#0F7F12" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#26A7DC" offset="0%" />
-          <stop stop-color="#1B94C6" offset="100%" />
+          <stop stopColor="#26A7DC" offset="0%" />
+          <stop stopColor="#1B94C6" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#FBCD3F" offset="0%" />
-          <stop stop-color="#FFCE2F" offset="100%" />
+          <stop stopColor="#FBCD3F" offset="0%" />
+          <stop stopColor="#FFCE2F" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#F03633" offset="0%" />
-          <stop stop-color="#D82A28" offset="100%" />
+          <stop stopColor="#F03633" offset="0%" />
+          <stop stopColor="#D82A28" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="82.842%"
@@ -39,24 +45,24 @@ const PM = props => {
           y2="78.479%"
           id="g"
         >
-          <stop stop-color="#2AA854" offset="0%" />
-          <stop stop-color="#219447" offset="100%" />
+          <stop stopColor="#2AA854" offset="0%" />
+          <stop stopColor="#219447" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="i">
-          <stop stop-color="#262626" offset="0%" />
-          <stop stop-color="#0D0D0D" offset="100%" />
+          <stop stopColor="#262626" offset="0%" />
+          <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="j">
-          <stop stop-color="#D7181D" offset="0%" />
-          <stop stop-color="#C60E13" offset="100%" />
+          <stop stopColor="#D7181D" offset="0%" />
+          <stop stopColor="#C60E13" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="k">
-          <stop stop-color="#FBCD3F" offset="0%" />
-          <stop stop-color="#FECB2F" offset="100%" />
+          <stop stopColor="#FBCD3F" offset="0%" />
+          <stop stopColor="#FECB2F" offset="100%" />
         </linearGradient>
         <path id="e" d="M0 0h7v5H0z" />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 10h21v5H0z" />
         <path fill="url(#c)" d="M0 15h21V0H0z" />
@@ -67,7 +73,7 @@ const PM = props => {
         <path
           d="M15.776 12.947a.5.5 0 00.448 0l2-1a.5.5 0 00-.448-.894L16 11.94l-1.776-.888a.5.5 0 00-.448 0L12 11.94l-1.776-.888a.5.5 0 00-.448.894l2 1a.5.5 0 00.448 0L14 12.06l1.776.888z"
           fill="url(#a)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
         <mask id="h" fill="#fff">
           <use xlinkHref="#e" />
@@ -100,13 +106,15 @@ const PM = props => {
 };
 
 PM.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 PM.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default PM;

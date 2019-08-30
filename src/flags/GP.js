@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const GP = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,23 +19,23 @@ const GP = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#25A057" offset="0%" />
-          <stop stop-color="#1C8245" offset="100%" />
+          <stop stopColor="#25A057" offset="0%" />
+          <stop stopColor="#1C8245" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#31B8F4" offset="0%" />
-          <stop stop-color="#1EA2DC" offset="100%" />
+          <stop stopColor="#31B8F4" offset="0%" />
+          <stop stopColor="#1EA2DC" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#FFE149" offset="0%" />
-          <stop stop-color="#FFDD32" offset="100%" />
+          <stop stopColor="#FFE149" offset="0%" />
+          <stop stopColor="#FFDD32" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <g transform="translate(6 .8)">
           <g transform="translate(0 2.202)">
@@ -48,12 +54,12 @@ const GP = props => {
           <path
             d="M6.974.783C8.35.367 8.762.294 8.954.901A1 1 0 018.3 2.156a8.466 8.466 0 00-.972.382c-.31.145-.535.284-.62.37a2.514 2.514 0 00-.267.35 8.576 8.576 0 00-.334.556c-.217.389-2.058 1.91-2.44 2.001-.299.072-.522.154-.586.2a1.741 1.741 0 00-.25.254c-.105.122-.22.272-.343.448a12.244 12.244 0 00-.617.974 1 1 0 01-1.361.383c-.662-.371.304-2.522.797-3.102.212-.248.41-.44.61-.583.312-.223.726-.384 1.28-.518.27-.065.563-.12.871-.166-.15.022-.172.044-.19.071.037-.054.085-.14.144-.254.024-.046.038-.076.077-.155l.134-.278c.054-.11.091-.185.127-.248.143-.258.281-.487.413-.687.18-.272.349-.488.517-.657.2-.202.879-.47 1.683-.714z"
             fill="#FFF"
-            fill-rule="nonzero"
+            fillRule="nonzero"
           />
           <path
             d="M5.646 1.85a3.82 3.82 0 00-.455.58c-.127.192-.259.412-.394.654-.166.298-.486 1.09-.654 1.116-.281.041-.562.093-.827.157-.473.114-.846.252-1.107.438-.167.12-.339.288-.52.501C1.551 5.46.514 7.503.755 7.638a.5.5 0 00.681-.191 12.763 12.763 0 01.644-1.018c.13-.184.254-.348.37-.485a2.12 2.12 0 01.34-.335c.13-.093.403-.194.76-.28.233-.056 1.966-1.479 2.121-1.759a9.07 9.07 0 01.354-.588c.126-.19.238-.336.33-.427.136-.138.407-.303.762-.47a8.977 8.977 0 011.034-.406.5.5 0 00.326-.628c-.083-.263-2.593.559-2.831.798z"
             fill="#29568D"
-            fill-rule="nonzero"
+            fillRule="nonzero"
           />
         </g>
       </g>
@@ -62,13 +68,15 @@ const GP = props => {
 };
 
 GP.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 GP.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default GP;

@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const TL = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,23 +19,23 @@ const TL = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#FF323E" offset="0%" />
-          <stop stop-color="#FD0D1B" offset="100%" />
+          <stop stopColor="#FF323E" offset="0%" />
+          <stop stopColor="#FD0D1B" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#FFCC51" offset="0%" />
-          <stop stop-color="#FFC63C" offset="100%" />
+          <stop stopColor="#FFCC51" offset="0%" />
+          <stop stopColor="#FFC63C" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#262626" offset="0%" />
-          <stop stop-color="#0D0D0D" offset="100%" />
+          <stop stopColor="#262626" offset="0%" />
+          <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path fill="url(#c)" d="M0 0l13 7.5L0 15z" />
@@ -45,13 +51,15 @@ const TL = props => {
 };
 
 TL.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 TL.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default TL;

@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MD = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,20 +19,20 @@ const MD = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#EB1C43" offset="0%" />
-          <stop stop-color="#CA1134" offset="100%" />
+          <stop stopColor="#EB1C43" offset="0%" />
+          <stop stopColor="#CA1134" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#115BCB" offset="0%" />
-          <stop stop-color="#094AAC" offset="100%" />
+          <stop stopColor="#115BCB" offset="0%" />
+          <stop stopColor="#094AAC" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#FFD953" offset="0%" />
-          <stop stop-color="#FFD130" offset="100%" />
+          <stop stopColor="#FFD953" offset="0%" />
+          <stop stopColor="#FFD130" offset="100%" />
         </linearGradient>
         <filter
           x="-10.7%"
@@ -50,7 +56,7 @@ const MD = props => {
         </filter>
         <path id="e" d="M7 0h7v15H7z" />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M10 0h11v15H10z" />
         <path fill="url(#c)" d="M0 0h7v15H0z" />
@@ -66,13 +72,15 @@ const MD = props => {
 };
 
 MD.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MD.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default MD;

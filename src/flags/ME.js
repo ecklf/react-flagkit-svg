@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ME = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,19 +19,19 @@ const ME = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#E6BE53" offset="0%" />
-          <stop stop-color="#D3AD46" offset="100%" />
+          <stop stopColor="#E6BE53" offset="0%" />
+          <stop stopColor="#D3AD46" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#E01826" offset="0%" />
-          <stop stop-color="#C30A17" offset="100%" />
+          <stop stopColor="#E01826" offset="0%" />
+          <stop stopColor="#C30A17" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <rect fill="url(#c)" x="1" y="1" width="19" height="13" rx=".75" />
@@ -43,13 +49,15 @@ const ME = props => {
 };
 
 ME.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ME.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default ME;

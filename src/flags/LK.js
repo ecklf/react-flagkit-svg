@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const LK = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,31 +19,31 @@ const LK = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#FFBF19" offset="0%" />
-          <stop stop-color="#FFB800" offset="100%" />
+          <stop stopColor="#FFBF19" offset="0%" />
+          <stop stopColor="#FFB800" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#A52531" offset="0%" />
-          <stop stop-color="#8E1F29" offset="100%" />
+          <stop stopColor="#A52531" offset="0%" />
+          <stop stopColor="#8E1F29" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#03664F" offset="0%" />
-          <stop stop-color="#005642" offset="100%" />
+          <stop stopColor="#03664F" offset="0%" />
+          <stop stopColor="#005642" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
-          <stop stop-color="#FF6816" offset="0%" />
-          <stop stop-color="#FF5B01" offset="100%" />
+          <stop stopColor="#FF6816" offset="0%" />
+          <stop stopColor="#FF5B01" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#FFBF18" offset="0%" />
-          <stop stop-color="#FFB800" offset="100%" />
+          <stop stopColor="#FFBF18" offset="0%" />
+          <stop stopColor="#FFB800" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path
@@ -59,13 +65,15 @@ const LK = props => {
 };
 
 LK.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 LK.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default LK;

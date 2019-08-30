@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const BL = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,27 +19,27 @@ const BL = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#216CD3" offset="0%" />
-          <stop stop-color="#1557B2" offset="100%" />
+          <stop stopColor="#216CD3" offset="0%" />
+          <stop stopColor="#1557B2" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#F7E14B" offset="0%" />
-          <stop stop-color="#F7DF3E" offset="100%" />
+          <stop stopColor="#F7E14B" offset="0%" />
+          <stop stopColor="#F7DF3E" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#E12539" offset="0%" />
-          <stop stop-color="#CA192C" offset="100%" />
+          <stop stopColor="#E12539" offset="0%" />
+          <stop stopColor="#CA192C" offset="100%" />
         </linearGradient>
         <path
           d="M.5 0h7v4.491c0 .557-.336 1.297-.76 1.66L5.147 7.518c-.633.542-1.662.54-2.292 0L1.259 6.15C.84 5.791.5 5.05.5 4.491V0z"
           id="b"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <g transform="translate(6.5 5)">
           <mask id="e" fill="#fff">
@@ -62,13 +68,15 @@ const BL = props => {
 };
 
 BL.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 BL.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default BL;

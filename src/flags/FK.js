@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const FK = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,28 +19,28 @@ const FK = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#07319C" offset="0%" />
-          <stop stop-color="#00247E" offset="100%" />
+          <stop stopColor="#07319C" offset="0%" />
+          <stop stopColor="#00247E" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#1F8BDE" offset="0%" />
-          <stop stop-color="#1075C2" offset="100%" />
+          <stop stopColor="#1F8BDE" offset="0%" />
+          <stop stopColor="#1075C2" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
-          <stop stop-color="#187536" offset="0%" />
-          <stop stop-color="#0E5023" offset="100%" />
+          <stop stopColor="#187536" offset="0%" />
+          <stop stopColor="#0E5023" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="h">
-          <stop stop-color="#DB1E36" offset="0%" />
-          <stop stop-color="#D51931" offset="100%" />
+          <stop stopColor="#DB1E36" offset="0%" />
+          <stop stopColor="#D51931" offset="100%" />
         </linearGradient>
         <path
           d="M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5z"
@@ -45,7 +51,7 @@ const FK = props => {
           id="i"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <g transform="translate(13 4)">
@@ -56,7 +62,7 @@ const FK = props => {
           <path
             d="M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5zm2.644 2.87c.263-.15.527-.334.772-.554C4.099 5.2 4.5 4.439 4.5 3.5V.51C4.5.5.499.5.499.5l.001 3c0 .939.401 1.701 1.084 2.316a4.398 4.398 0 00.916.632c.043-.022.091-.048.144-.078z"
             fill="url(#e)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             mask="url(#f)"
           />
           <path
@@ -72,7 +78,7 @@ const FK = props => {
           <path
             d="M-.323 6.177l.35-.35.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3-.35.35L-.854 6l.354.354.177-.177zM-.323 4.677l.35-.35.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3-.35.35-.177.177.354.354.177-.177zM-.323 7.677l.35-.35.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 01.346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3a.244.244 0 01-.346 0l-.3-.3a.744.744 0 00-1.054 0l-.3.3-.35.35-.177.177.354.354.177-.177z"
             fill="url(#a)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             mask="url(#f)"
           />
         </g>
@@ -93,13 +99,15 @@ const FK = props => {
 };
 
 FK.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 FK.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default FK;

@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const GBNIR = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,27 +19,27 @@ const GBNIR = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#E82739" offset="0%" />
-          <stop stop-color="#CA1A2B" offset="100%" />
+          <stop stopColor="#E82739" offset="0%" />
+          <stop stopColor="#CA1A2B" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#E6101E" offset="0%" />
-          <stop stop-color="#CA0814" offset="100%" />
+          <stop stopColor="#E6101E" offset="0%" />
+          <stop stopColor="#CA0814" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
-          <stop stop-color="#FFD148" offset="0%" />
-          <stop stop-color="#FFCB2F" offset="100%" />
+          <stop stopColor="#FFD148" offset="0%" />
+          <stop stopColor="#FFCB2F" offset="100%" />
         </linearGradient>
         <path
           d="M9 3.75L10 4l.5-.5.5.5 1-.25-.404 1.009a.4.4 0 01-.341.241h-1.51a.39.39 0 01-.341-.241L9 3.75zM10.5 3a.5.5 0 110-1 .5.5 0 010 1z"
           id="d"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path d="M9 6H0v3h9v6h3V9h9V6h-9V0H9v6z" fill="url(#b)" />
         <path
@@ -47,7 +53,7 @@ const GBNIR = props => {
         <path
           d="M10.5 2.908c-.511 0-.967.304-1.168.763l-.1.229.457.201.1-.229a.775.775 0 011.418-.005l.102.228.456-.205-.102-.228a1.275 1.275 0 00-1.164-.754z"
           fill="url(#a)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
         <mask id="f" fill="#fff">
           <use xlinkHref="#d" />
@@ -62,13 +68,15 @@ const GBNIR = props => {
 };
 
 GBNIR.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 GBNIR.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default GBNIR;

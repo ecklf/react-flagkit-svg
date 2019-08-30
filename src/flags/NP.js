@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const NP = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,16 +19,16 @@ const NP = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#EE1B44" offset="0%" />
-          <stop stop-color="#DD153C" offset="100%" />
+          <stop stopColor="#EE1B44" offset="0%" />
+          <stop stopColor="#DD153C" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#0543A8" offset="0%" />
-          <stop stop-color="#003893" offset="100%" />
+          <stop stopColor="#0543A8" offset="0%" />
+          <stop stopColor="#003893" offset="100%" />
         </linearGradient>
         <path
           d="M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0V0z"
@@ -33,7 +39,7 @@ const NP = props => {
           id="e"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <mask id="c" fill="#fff">
           <use xlinkHref="#a" />
         </mask>
@@ -56,13 +62,15 @@ const NP = props => {
 };
 
 NP.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 NP.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default NP;

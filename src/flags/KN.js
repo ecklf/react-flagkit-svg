@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const KN = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,27 +19,27 @@ const KN = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#1EC160" offset="0%" />
-          <stop stop-color="#169E4D" offset="100%" />
+          <stop stopColor="#1EC160" offset="0%" />
+          <stop stopColor="#169E4D" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#DF2A40" offset="0%" />
-          <stop stop-color="#CC162C" offset="100%" />
+          <stop stopColor="#DF2A40" offset="0%" />
+          <stop stopColor="#CC162C" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="16.742%" x2="50%" y2="82.422%" id="d">
-          <stop stop-color="#FFD956" offset="0%" />
-          <stop stop-color="#FCD036" offset="100%" />
+          <stop stopColor="#FFD956" offset="0%" />
+          <stop stopColor="#FCD036" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
-          <stop stop-color="#262626" offset="0%" />
-          <stop stop-color="#0D0D0D" offset="100%" />
+          <stop stopColor="#262626" offset="0%" />
+          <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M.001 10l21-10h-21z" />
         <path fill="url(#c)" d="M.001 15h21V5z" />
@@ -52,13 +58,15 @@ const KN = props => {
 };
 
 KN.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 KN.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default KN;

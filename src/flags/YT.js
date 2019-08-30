@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const YT = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,28 +19,28 @@ const YT = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="i">
-          <stop stop-color="#E6402C" offset="0%" />
-          <stop stop-color="#D1321F" offset="100%" />
+          <stop stopColor="#E6402C" offset="0%" />
+          <stop stopColor="#D1321F" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#1B2CA9" offset="0%" />
-          <stop stop-color="#132294" offset="100%" />
+          <stop stopColor="#1B2CA9" offset="0%" />
+          <stop stopColor="#132294" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="k">
-          <stop stop-color="#262626" offset="0%" />
-          <stop stop-color="#0D0D0D" offset="100%" />
+          <stop stopColor="#262626" offset="0%" />
+          <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="j">
-          <stop stop-color="#D0D0D0" offset="0%" />
-          <stop stop-color="#C4C4C4" offset="100%" />
+          <stop stopColor="#D0D0D0" offset="0%" />
+          <stop stopColor="#C4C4C4" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="l">
-          <stop stop-color="#F7E04B" offset="0%" />
-          <stop stop-color="#EAD135" offset="100%" />
+          <stop stopColor="#F7E04B" offset="0%" />
+          <stop stopColor="#EAD135" offset="100%" />
         </linearGradient>
         <path
           d="M0 .491A.49.49 0 01.498 0h4.004A.5.5 0 015 .491v5.018a.535.535 0 01-.5.522S3 6 2.5 6.94C2 6 .5 6.03.5 6.03a.54.54 0 01-.5-.522V.491z"
@@ -83,7 +89,7 @@ const YT = props => {
           />
         </filter>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <g transform="translate(8 4)">
           <mask id="c" fill="#fff">
@@ -128,13 +134,15 @@ const YT = props => {
 };
 
 YT.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 YT.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default YT;

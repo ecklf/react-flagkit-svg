@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const NA = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,24 +19,24 @@ const NA = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="m">
-          <stop stop-color="#E52347" offset="0%" />
-          <stop stop-color="#D01739" offset="100%" />
+          <stop stopColor="#E52347" offset="0%" />
+          <stop stopColor="#D01739" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="j">
-          <stop stop-color="#1BAC55" offset="0%" />
-          <stop stop-color="#149447" offset="100%" />
+          <stop stopColor="#1BAC55" offset="0%" />
+          <stop stopColor="#149447" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#0C4799" offset="0%" />
-          <stop stop-color="#05387E" offset="100%" />
+          <stop stopColor="#0C4799" offset="0%" />
+          <stop stopColor="#05387E" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
-          <stop stop-color="#FFD243" offset="0%" />
-          <stop stop-color="#FFCD2F" offset="100%" />
+          <stop stopColor="#FFD243" offset="0%" />
+          <stop stopColor="#FFCD2F" offset="100%" />
         </linearGradient>
         <filter
           x="-3.6%"
@@ -114,7 +120,7 @@ const NA = props => {
         <path id="i" d="M3.121 17.304h21v-10z" />
         <path id="l" d="M5.433 19.304L25.75 6.609 21.81.304 1.493 12.999z" />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <g transform="translate(-3.12 -2.3)">
           <use fill="#000" filter="url(#b)" xlinkHref="#c" />
@@ -143,13 +149,15 @@ const NA = props => {
 };
 
 NA.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 NA.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default NA;

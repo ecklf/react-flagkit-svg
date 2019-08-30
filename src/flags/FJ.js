@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const FJ = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,24 +19,24 @@ const FJ = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#79CFF6" offset="0%" />
-          <stop stop-color="#68BFE6" offset="100%" />
+          <stop stopColor="#79CFF6" offset="0%" />
+          <stop stopColor="#68BFE6" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#042C90" offset="0%" />
-          <stop stop-color="#00247E" offset="100%" />
+          <stop stopColor="#042C90" offset="0%" />
+          <stop stopColor="#00247E" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#EB1D43" offset="0%" />
-          <stop stop-color="#D21034" offset="100%" />
+          <stop stopColor="#EB1D43" offset="0%" />
+          <stop stopColor="#D21034" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
-          <stop stop-color="#DB1E36" offset="0%" />
-          <stop stop-color="#D51931" offset="100%" />
+          <stop stopColor="#DB1E36" offset="0%" />
+          <stop stopColor="#D51931" offset="100%" />
         </linearGradient>
         <path d="M0 3.5V0h5v3.5C5 6 2.5 7 2.5 7S0 6 0 3.5z" id="d" />
         <path
@@ -38,7 +44,7 @@ const FJ = props => {
           id="h"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path fill="url(#c)" d="M0 0h9v7H0z" />
@@ -75,13 +81,15 @@ const FJ = props => {
 };
 
 FJ.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 FJ.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default FJ;

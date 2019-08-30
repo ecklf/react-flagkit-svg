@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const UY = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,19 +19,19 @@ const UY = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#0E4DC5" offset="0%" />
-          <stop stop-color="#073DA6" offset="100%" />
+          <stop stopColor="#0E4DC5" offset="0%" />
+          <stop stopColor="#073DA6" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#FED443" offset="0%" />
-          <stop stop-color="#FCD036" offset="100%" />
+          <stop stopColor="#FED443" offset="0%" />
+          <stop stopColor="#FCD036" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path
@@ -39,7 +45,7 @@ const UY = props => {
         <path
           d="M4.125 5a.125.125 0 01.25 0A.622.622 0 005 5.625c.243 0 .46-.14.564-.355l.038-.07.014-.023c.048-.08.062-.119.062-.177a.125.125 0 01.25 0 .534.534 0 01-.097.304l-.013.022-.028.052A.875.875 0 014.125 5zM5.5 4.75a.25.25 0 110-.5.25.25 0 010 .5zm-1 0a.25.25 0 110-.5.25.25 0 010 .5z"
           fill="#C6A326"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </g>
     </svg>
@@ -47,13 +53,15 @@ const UY = props => {
 };
 
 UY.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 UY.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default UY;

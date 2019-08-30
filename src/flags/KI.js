@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const KI = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,23 +19,23 @@ const KI = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#E62B3F" offset="0%" />
-          <stop stop-color="#CA1A2C" offset="100%" />
+          <stop stopColor="#E62B3F" offset="0%" />
+          <stop stopColor="#CA1A2C" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#FFDA57" offset="0%" />
-          <stop stop-color="#FCD036" offset="100%" />
+          <stop stopColor="#FFDA57" offset="0%" />
+          <stop stopColor="#FCD036" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#0752A2" offset="0%" />
-          <stop stop-color="#034285" offset="100%" />
+          <stop stopColor="#0752A2" offset="0%" />
+          <stop stopColor="#034285" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v8H0z" />
         <circle fill="url(#c)" cx="10.5" cy="8.5" r="2.5" />
@@ -41,7 +47,7 @@ const KI = props => {
         <path
           d="M23.322 12.933l.474.159-.316.948-.474-.158-.47-.156-2.062-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688-.475.158-.316-.949.474-.158 2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687.469.156zm0-2.5l.474.159-.316.948-.474-.158-.47-.156-2.062-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688-.475.158-.316-.949.474-.158 2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687.469.156zm0-2.5l.474.159-.316.948-.474-.158-.47-.156-2.062-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688c-.36.12-.897.119-1.254 0l-2.063-.688a1.278 1.278 0 00-.62 0l-2.063.688-.475.158L-1 7.935l.474-.158 2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687c.153.051.467.051.621 0l2.063-.687c.357-.12.894-.12 1.254 0l2.062.687.469.156z"
           fill="#FFF"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </g>
     </svg>
@@ -49,13 +55,15 @@ const KI = props => {
 };
 
 KI.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 KI.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default KI;

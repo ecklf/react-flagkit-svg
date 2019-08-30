@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const VA = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,27 +19,27 @@ const VA = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#FDE048" offset="0%" />
-          <stop stop-color="#FFDF32" offset="100%" />
+          <stop stopColor="#FDE048" offset="0%" />
+          <stop stopColor="#FFDF32" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#CDCCCC" offset="0%" />
-          <stop stop-color="#E4E4E4" offset="100%" />
+          <stop stopColor="#CDCCCC" offset="0%" />
+          <stop stopColor="#E4E4E4" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#CD9D25" offset="0%" />
-          <stop stop-color="#EBB93A" offset="100%" />
+          <stop stopColor="#CD9D25" offset="0%" />
+          <stop stopColor="#EBB93A" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
-          <stop stop-color="#F5252C" offset="0%" />
-          <stop stop-color="#F6151C" offset="100%" />
+          <stop stopColor="#F5252C" offset="0%" />
+          <stop stopColor="#F6151C" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path fill="url(#a)" d="M10 0h11v15H10z" />
@@ -54,7 +60,7 @@ const VA = props => {
         <path
           d="M13.026 10.658c.08.242.247.576.527.912.48.576 1.13.93 1.947.93.817 0 1.467-.354 1.947-.93.28-.336.447-.67.527-.912a.5.5 0 10-.948-.316 1.98 1.98 0 01-.348.588c-.301.362-.683.57-1.178.57-.495 0-.877-.208-1.178-.57a1.98 1.98 0 01-.348-.588.5.5 0 10-.948.316z"
           fill="url(#e)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </g>
     </svg>
@@ -62,13 +68,15 @@ const VA = props => {
 };
 
 VA.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 VA.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default VA;

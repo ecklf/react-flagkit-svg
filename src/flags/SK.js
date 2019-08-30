@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SK = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -13,31 +19,31 @@ const SK = props => {
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#0C47B7" offset="0%" />
-          <stop stop-color="#073DA4" offset="100%" />
+          <stop stopColor="#0C47B7" offset="0%" />
+          <stop stopColor="#073DA4" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#E53B35" offset="0%" />
-          <stop stop-color="#D32E28" offset="100%" />
+          <stop stopColor="#E53B35" offset="0%" />
+          <stop stopColor="#D32E28" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
-          <stop stop-color="#F73744" offset="0%" />
-          <stop stop-color="#EC212F" offset="100%" />
+          <stop stopColor="#F73744" offset="0%" />
+          <stop stopColor="#EC212F" offset="100%" />
         </linearGradient>
         <path
           d="M1.711 2.001A1.048 1.048 0 012.751 1H7.25c.553 0 1.018.447 1.04 1.001L8.46 6.5c.022.553-.297 1.289-.72 1.652L6.146 9.518c-.633.542-1.662.54-2.292 0L2.259 8.15c-.419-.36-.742-1.098-.72-1.652L1.71 2z"
           id="e"
         />
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 5h21v5H0z" />
         <path fill="url(#c)" d="M0 10h21v5H0z" />
@@ -46,7 +52,7 @@ const SK = props => {
           <path
             d="M2.751 0H7.25c1.09 0 1.997.872 2.039 1.963L9.46 6.46c.033.86-.415 1.89-1.07 2.45l-1.594 1.367c-1.007.863-2.589.861-3.594 0L1.61 8.91C.957 8.352.506 7.32.539 6.46l.173-4.497A2.048 2.048 0 012.752 0z"
             fill="url(#d)"
-            fill-rule="nonzero"
+            fillRule="nonzero"
           />
           <mask id="g" fill="#fff">
             <use xlinkHref="#e" />
@@ -69,13 +75,15 @@ const SK = props => {
 };
 
 SK.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 SK.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default SK;

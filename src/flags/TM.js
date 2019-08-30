@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const TM = props => {
-  const { width, height, ...otherProps } = props;
+  let { size, width, height, ...otherProps } = props;
+
+  if (size !== height) {
+    width = width * (size / height);
+    height = height * (size / height);
+  }
+
   return (
     <svg
       width={width}
@@ -18,19 +24,19 @@ const TM = props => {
         <ellipse id="j" cx="1.5" cy=".5" rx="1.5" ry="1" />
         <ellipse id="k" cx="1.5" cy="1" rx="1.5" ry="1" />
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stop-color="#FFF" offset="0%" />
-          <stop stop-color="#F0F0F0" offset="100%" />
+          <stop stopColor="#FFF" offset="0%" />
+          <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
-          <stop stop-color="#30C375" offset="0%" />
-          <stop stop-color="#28AE67" offset="100%" />
+          <stop stopColor="#30C375" offset="0%" />
+          <stop stopColor="#28AE67" offset="100%" />
         </linearGradient>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
-          <stop stop-color="#DE414F" offset="0%" />
-          <stop stop-color="#CA3745" offset="100%" />
+          <stop stopColor="#DE414F" offset="0%" />
+          <stop stopColor="#CA3745" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path fill="url(#a)" d="M0 0h21v15H0z" />
         <path fill="url(#b)" d="M0 0h21v15H0z" />
         <path fill="url(#c)" d="M3 0h3v15H3z" />
@@ -88,13 +94,15 @@ const TM = props => {
 };
 
 TM.propTypes = {
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 TM.defaultProps = {
-  width: "21",
-  height: "15",
+  size: 15,
+  width: 21,
+  height: 15,
 };
 
 export default TM;
