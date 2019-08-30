@@ -7,21 +7,17 @@
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "fetch": "rm -rf SVG/ && svn export https://github.com/madebybowtie/FlagKit/trunk/Assets/SVG",
-    "compile": "yarn fetch && npx svgo SVG/*.svg && node build.js && yarn format",
+    "dev": "nodemon -w bin/build.js -r esm bin/build.js",
+    "fetch": "rm -rf svg/ && svn export https://github.com/madebybowtie/FlagKit/trunk/Assets/SVG && mv SVG svg",
     "format": "prettier --trailing-comma es5 --write 'src/**/*.js'",
+    "compile": "yarn fetch && rm -rf src/ && node -r esm bin/build.js && yarn format",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
-    "build": "concurrently \"npm:build:*\""
+    "build": "concurrently \"npm:build:*\"",
+    "deploy": "yarn compile && yarn build"
   },
   "repository": "https://github.com/impulse/react-flagkit-svg",
-  "keywords": [
-    "react",
-    "flag",
-    "flagkit",
-    "svg",
-    "design"
-  ],
+  "keywords": ["react", "flag", "flagkit", "svg", "design"],
   "author": "impulse",
   "license": "MIT",
   "homepage": "https://github.com/impulse/react-flagkit-svg/#readme",
@@ -34,9 +30,14 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@svgr/core": "^4.3.2",
+    "@svgr/plugin-jsx": "^4.3.2",
+    "@svgr/plugin-prettier": "^4.3.2",
+    "@svgr/plugin-svgo": "^4.3.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "concurrently": "^4.1.2",
+    "esm": "^3.2.25",
     "prettier": "^1.18.2",
     "rollup": "^1.20.3",
     "rollup-plugin-babel": "^4.3.3"

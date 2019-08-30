@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const NR = props => {
-  let { size, width, height, ...otherProps } = props;
-
+const SvgComponent = ({ size, width, height, ...otherProps }) => {
   if (size !== height) {
     width = width * (size / height);
     height = height * (size / height);
@@ -14,46 +12,94 @@ const NR = props => {
       width={width}
       height={height}
       viewBox="0 0 21 15"
+      size={size}
       {...otherProps}
-      xmlns="http://www.w3.org/2000/svg"
     >
+      <title>{"NR"}</title>
+      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stopColor="#FFF" offset="0%" />
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="NR_svg_linearGradient-1"
+        >
+          <stop stopColor="#FFFFFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="NR_svg_linearGradient-2"
+        >
           <stop stopColor="#0744A7" offset="0%" />
           <stop stopColor="#00307D" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="NR_svg_linearGradient-3"
+        >
           <stop stopColor="#FCC747" offset="0%" />
           <stop stopColor="#FEC539" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fillRule="evenodd">
-        <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v15H0z" />
-        <path fill="url(#c)" d="M0 6h21v2H0z" />
-        <path
-          fill="url(#a)"
-          d="M5.5 12.25l-.773 1.128.038-1.367-1.288.458.834-1.083L3 11l1.311-.386-.834-1.083 1.288.458-.038-1.367L5.5 9.75l.773-1.128-.038 1.367 1.288-.458-.834 1.083L8 11l-1.311.386.834 1.083-1.288-.458.038 1.367z"
-        />
+      <g
+        id="NR_svg_Symbols"
+        stroke="none"
+        strokeWidth={1}
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g id="NR_svg_NR">
+          <rect
+            id="NR_svg_FlagBackground"
+            fill="url(#NR_svg_linearGradient-1)"
+            x={0}
+            y={0}
+            width={21}
+            height={15}
+          />
+          <rect
+            id="NR_svg_Mask-Copy"
+            fill="url(#NR_svg_linearGradient-2)"
+            x={0}
+            y={0}
+            width={21}
+            height={15}
+          />
+          <rect
+            id="NR_svg_Rectangle-1337"
+            fill="url(#NR_svg_linearGradient-3)"
+            x={0}
+            y={6}
+            width={21}
+            height={2}
+          />
+          <polygon
+            id="NR_svg_Star-27"
+            fill="url(#NR_svg_linearGradient-1)"
+            points="5.5 12.25 4.72745751 13.3776413 4.76526843 12.0112712 3.47745751 12.4694631 4.31117935 11.3862712 3 11 4.31117935 10.6137288 3.47745751 9.53053687 4.76526843 9.98872876 4.72745751 8.62235871 5.5 9.75 6.27254249 8.62235871 6.23473157 9.98872876 7.52254249 9.53053687 6.68882065 10.6137288 8 11 6.68882065 11.3862712 7.52254249 12.4694631 6.23473157 12.0112712 6.27254249 13.3776413"
+          />
+        </g>
       </g>
     </svg>
   );
 };
 
-NR.propTypes = {
+SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-
-NR.defaultProps = {
-  size: 15,
-  width: 21,
-  height: 15,
+SvgComponent.defaultProps = {
+  size: "25",
+  width: "37",
+  height: "25",
 };
-
-export default NR;
+export default SvgComponent;

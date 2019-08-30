@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const UG = props => {
-  let { size, width, height, ...otherProps } = props;
-
+const SvgComponent = ({ size, width, height, ...otherProps }) => {
   if (size !== height) {
     width = width * (size / height);
     height = height * (size / height);
@@ -14,54 +12,143 @@ const UG = props => {
       width={width}
       height={height}
       viewBox="0 0 21 15"
+      size={size}
       {...otherProps}
-      xmlns="http://www.w3.org/2000/svg"
     >
+      <title>{"UG"}</title>
+      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stopColor="#FFF" offset="0%" />
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="UG_svg_linearGradient-1"
+        >
+          <stop stopColor="#FFFFFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="UG_svg_linearGradient-2"
+        >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="UG_svg_linearGradient-3"
+        >
           <stop stopColor="#ED1623" offset="0%" />
           <stop stopColor="#D70915" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="UG_svg_linearGradient-4"
+        >
           <stop stopColor="#FEE044" offset="0%" />
           <stop stopColor="#FCDB32" offset="100%" />
         </linearGradient>
       </defs>
-      <g fill="none" fillRule="evenodd">
-        <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v2H0zM0 8h21v2H0z" />
-        <path fill="url(#c)" d="M0 5h21v3H0z" />
-        <path fill="url(#d)" d="M0 2h21v3H0z" />
-        <path fill="url(#c)" d="M0 13h21v2H0z" />
-        <path fill="url(#d)" d="M0 10h21v3H0z" />
-        <circle fill="url(#a)" cx="10.5" cy="7.5" r="3.5" />
-        <path
-          d="M9.68 5.68a.253.253 0 010-.36l.14-.14c.1-.1.252-.27.338-.362l.122-.099c.122.017.317-.036.442-.012l.119.092c.088.111.113.293.043.433l-.268.536a1.298 1.298 0 00-.116.482c0 .138.092.296.232.366l.536.268c.128.064.31.194.406.29l.652.652a.36.36 0 01.058.406l-.268.536c-.064.128-.194.154-.297.051l-.138-.138a.253.253 0 00-.362 0l-.138.138A.71.71 0 0011 9.25c0 .138.078.328.18.43l.14.14c.1.1.062.18-.068.18h-1.004c-.137 0-.17-.078-.067-.18l.138-.14c.1-.1.181-.296.181-.43a.253.253 0 00-.25-.25.691.691 0 00-.43.18l-.14.14c-.1.1-.258.102-.36 0l-.14-.14a.253.253 0 010-.36l.14-.14c.1-.1.287-.18.432-.18h.496c.139 0 .171-.08.08-.172L9.172 7.172a.245.245 0 01.002-.346l.652-.652a.249.249 0 00-.007-.355l-.138-.138z"
-          fill="url(#b)"
-        />
+      <g
+        id="UG_svg_Symbols"
+        stroke="none"
+        strokeWidth={1}
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g id="UG_svg_UG">
+          <rect
+            id="UG_svg_FlagBackground"
+            fill="url(#UG_svg_linearGradient-1)"
+            x={0}
+            y={0}
+            width={21}
+            height={15}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-2)"
+            x={0}
+            y={0}
+            width={21}
+            height={2}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-2)"
+            x={0}
+            y={8}
+            width={21}
+            height={2}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-3)"
+            x={0}
+            y={5}
+            width={21}
+            height={3}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-4)"
+            x={0}
+            y={2}
+            width={21}
+            height={3}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-3)"
+            x={0}
+            y={13}
+            width={21}
+            height={2}
+          />
+          <rect
+            id="UG_svg_Rectangle-2"
+            fill="url(#UG_svg_linearGradient-4)"
+            x={0}
+            y={10}
+            width={21}
+            height={3}
+          />
+          <circle
+            id="UG_svg_Oval-220"
+            fill="url(#UG_svg_linearGradient-1)"
+            cx={10.5}
+            cy={7.5}
+            r={3.5}
+          />
+          <path
+            d="M9.68051147,5.68051147 C9.58081774,5.58081774 9.578125,5.421875 9.68051147,5.31948853 L9.81948853,5.18051147 C9.91918226,5.08081774 10.0724682,4.9091568 10.1580395,4.81756592 L10.2801239,4.71923828 C10.4015581,4.73622751 10.5972101,4.68297577 10.7223398,4.70728302 L10.8409911,4.79915619 C10.9288093,4.91007916 10.9538574,5.09228516 10.8840332,5.23193361 L10.6159668,5.76806645 C10.5519201,5.89615984 10.5,6.11596685 10.5,6.25000005 L10.5,6.25000005 C10.5,6.38807124 10.5922852,6.54614262 10.7319336,6.61596682 L11.2680664,6.88403316 C11.3961598,6.94807984 11.5784683,7.07846826 11.6741867,7.17418664 L12.3258133,7.82581323 C12.422014,7.92201389 12.4538574,8.09228511 12.3840332,8.23193358 L12.1159668,8.76806652 C12.0519201,8.89615994 11.921875,8.92187513 11.8194885,8.81948861 L11.6805115,8.68051149 C11.5808177,8.58081771 11.421875,8.57812497 11.3194885,8.68051149 L11.1805115,8.81948861 C11.0808177,8.91918239 11,9.11596697 11,9.25000017 L11,9.25000017 C11,9.38807136 11.078125,9.57812514 11.1805115,9.68051158 L11.3194885,9.81948859 C11.4191823,9.91918229 11.3822975,10 11.2523055,10 L10.2476945,10 C10.1108966,10 10.078125,9.921875 10.1805115,9.81948853 L10.3194885,9.68051147 C10.4191823,9.58081774 10.5,9.3840332 10.5,9.25 L10.5,9.25 C10.5,9.11192881 10.3840332,9 10.25,9 L10.25,9 C10.1119288,9 9.921875,9.078125 9.81948853,9.18051147 L9.68051147,9.31948853 C9.58081774,9.41918226 9.421875,9.421875 9.31948853,9.31948853 L9.18051147,9.18051147 C9.08081774,9.08081774 9.078125,8.921875 9.18051147,8.81948853 L9.31948853,8.68051147 C9.41918226,8.58081774 9.60701752,8.5 9.75234222,8.5 L10.2476578,8.5 C10.3870225,8.5 10.4193535,8.41935349 10.3279309,8.32793093 L9.17206907,7.17206907 C9.07703795,7.07703795 9.07846832,6.92153168 9.17418671,6.82581329 L9.82581329,6.17418671 C9.92201396,6.07798604 9.921875,5.921875 9.81948853,5.81948853 L9.68051147,5.68051147 Z"
+            id="UG_svg_Rectangle-1723"
+            fill="url(#UG_svg_linearGradient-2)"
+          />
+        </g>
       </g>
     </svg>
   );
 };
 
-UG.propTypes = {
+SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-
-UG.defaultProps = {
-  size: 15,
-  width: 21,
-  height: 15,
+SvgComponent.defaultProps = {
+  size: "25",
+  width: "37",
+  height: "25",
 };
-
-export default UG;
+export default SvgComponent;

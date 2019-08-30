@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const AG = props => {
-  let { size, width, height, ...otherProps } = props;
-
+const SvgComponent = ({ size, width, height, ...otherProps }) => {
   if (size !== height) {
     width = width * (size / height);
     height = height * (size / height);
@@ -14,73 +12,148 @@ const AG = props => {
       width={width}
       height={height}
       viewBox="0 0 21 15"
+      size={size}
       {...otherProps}
-      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
+      <title>{"AG"}</title>
+      <desc>{"Created with sketchtool."}</desc>
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
-          <stop stopColor="#FFF" offset="0%" />
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="AG_svg_linearGradient-1"
+        >
+          <stop stopColor="#FFFFFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="AG_svg_linearGradient-2"
+        >
           <stop stopColor="#E2243B" offset="0%" />
           <stop stopColor="#CC162C" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="AG_svg_linearGradient-3"
+        >
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="e">
+        <polygon id="AG_svg_path-4" points="0 0 21 0 10.5 15" />
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="AG_svg_linearGradient-6"
+        >
           <stop stopColor="#FFCF3C" offset="0%" />
           <stop stopColor="#FECB2F" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="AG_svg_linearGradient-7"
+        >
           <stop stopColor="#1984D8" offset="0%" />
           <stop stopColor="#1175C4" offset="100%" />
         </linearGradient>
-        <path id="c" d="M0 0h21L10.5 15z" />
       </defs>
-      <g fill="none" fillRule="evenodd">
-        <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path
-          d="M8.5 7a2 2 0 00.998 1.731m2.078-.045c.556-.355.924-.978.924-1.686"
-          opacity=".75"
-        />
-        <ellipse
-          fill-opacity=".5"
-          fill="#FFF"
-          cx="10.5"
-          cy="6.5"
-          rx="1"
-          ry="1.5"
-        />
-        <path fill="url(#b)" d="M0 0h21v15H0z" />
-        <mask id="f" fill="#fff">
-          <use xlinkHref="#c" />
-        </mask>
-        <use fill="url(#d)" xlinkHref="#c" />
-        <path
-          fill="url(#e)"
-          mask="url(#f)"
-          d="M10.5 8.25l-1.722 1.907.131-2.566-2.566.131L8.25 6 6 4l2.909.5-.409-3 2 2.5 2-2.5-.409 3L15 4l-2.25 2 1.907 1.722-2.566-.131.131 2.566z"
-        />
-        <path fill="url(#g)" mask="url(#f)" d="M0 6h21v4H0z" />
-        <path fill="url(#a)" mask="url(#f)" d="M0 10h21v5H0z" />
+      <g
+        id="AG_svg_Symbols"
+        stroke="none"
+        strokeWidth={1}
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g id="AG_svg_AG">
+          <rect
+            id="AG_svg_FlagBackground"
+            fill="url(#AG_svg_linearGradient-1)"
+            x={0}
+            y={0}
+            width={21}
+            height={15}
+          />
+          <path
+            d="M8.5,7 C8.5,7.73933629 8.90117129,8.38497401 9.49770903,8.73110833 M11.576137,8.68609748 C12.1317007,8.33077576 12.5,7.70839833 12.5,7"
+            id="AG_svg_Oval-5"
+            opacity={0.75}
+          />
+          <ellipse
+            id="AG_svg_Oval-5"
+            fillOpacity={0.5}
+            fill="#FFFFFF"
+            cx={10.5}
+            cy={6.5}
+            rx={1}
+            ry={1.5}
+          />
+          <rect
+            id="AG_svg_Mask-Copy"
+            fill="url(#AG_svg_linearGradient-2)"
+            x={0}
+            y={0}
+            width={21}
+            height={15}
+          />
+          <mask id="AG_svg_mask-5" fill="white">
+            <use xlinkHref="#path-4" />
+          </mask>
+          <use
+            id="AG_svg_Mask"
+            fill="url(#AG_svg_linearGradient-3)"
+            xlinkHref="#path-4"
+          />
+          <polygon
+            id="AG_svg_Star-1"
+            fill="url(#AG_svg_linearGradient-6)"
+            mask="url(#AG_svg_mask-5)"
+            points="10.5 8.25 8.77792455 10.1574579 8.90900974 7.59099026 6.3425421 7.72207545 8.25 6 5.99999999 3.99999993 8.90900963 4.49999993 8.49999999 1.49999999 10.5 3.99999993 12.5 1.49999999 12.0909905 4.49999993 15 4 12.75 6 14.6574579 7.72207545 12.0909903 7.59099026 12.2220754 10.1574579"
+          />
+          <rect
+            id="AG_svg_Rectangle-2"
+            fill="url(#AG_svg_linearGradient-7)"
+            mask="url(#AG_svg_mask-5)"
+            x={0}
+            y={6}
+            width={21}
+            height={4}
+          />
+          <rect
+            id="AG_svg_Rectangle-2"
+            fill="url(#AG_svg_linearGradient-1)"
+            mask="url(#AG_svg_mask-5)"
+            x={0}
+            y={10}
+            width={21}
+            height={5}
+          />
+        </g>
       </g>
     </svg>
   );
 };
 
-AG.propTypes = {
+SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-
-AG.defaultProps = {
-  size: 15,
-  width: 21,
-  height: 15,
+SvgComponent.defaultProps = {
+  size: "25",
+  width: "37",
+  height: "25",
 };
-
-export default AG;
+export default SvgComponent;

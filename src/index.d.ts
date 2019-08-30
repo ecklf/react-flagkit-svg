@@ -1,12 +1,3 @@
-/// <reference types="react" />
-import { ComponentType, SVGAttributes } from 'react';
-
-interface Props extends SVGAttributes<SVGElement> {
-width?: string | number;
-height?: string | number;
-}
-
-type Flag = ComponentType<Props>;
 export const AD: Flag;
 export const AE: Flag;
 export const AF: Flag;
