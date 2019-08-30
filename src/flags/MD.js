@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const MD = props => {
-  let { size, width, height, ...otherProps } = props;
-
+const SvgComponent = ({ size, width, height, ...otherProps }) => {
   if (size !== height) {
     width = width * (size / height);
     height = height * (size / height);
@@ -13,24 +11,48 @@ const MD = props => {
     <svg
       width={width}
       height={height}
+      size={size}
       viewBox="0 0 21 15"
       {...otherProps}
-      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="MD_svg_prefix__a"
+        >
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="MD_svg_prefix__b"
+        >
           <stop stopColor="#EB1C43" offset="0%" />
           <stop stopColor="#CA1134" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="MD_svg_prefix__c"
+        >
           <stop stopColor="#115BCB" offset="0%" />
           <stop stopColor="#094AAC" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="MD_svg_prefix__f"
+        >
           <stop stopColor="#FFD953" offset="0%" />
           <stop stopColor="#FFD130" offset="100%" />
         </linearGradient>
@@ -40,10 +62,10 @@ const MD = props => {
           width="121.4%"
           height="110%"
           filterUnits="objectBoundingBox"
-          id="d"
+          id="MD_svg_prefix__d"
         >
           <feMorphology
-            radius=".25"
+            radius={0.25}
             operator="dilate"
             in="SourceAlpha"
             result="shadowSpreadOuter1"
@@ -54,14 +76,18 @@ const MD = props => {
             in="shadowOffsetOuter1"
           />
         </filter>
-        <path id="e" d="M7 0h7v15H7z" />
+        <path id="MD_svg_prefix__e" d="M7 0h7v15H7z" />
       </defs>
       <g fill="none" fillRule="evenodd">
-        <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M10 0h11v15H10z" />
-        <path fill="url(#c)" d="M0 0h7v15H0z" />
-        <use fill="#000" filter="url(#d)" xlinkHref="#e" />
-        <use fill="url(#f)" xlinkHref="#e" />
+        <path fill="url(#MD_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#MD_svg_prefix__b)" d="M10 0h11v15H10z" />
+        <path fill="url(#MD_svg_prefix__c)" d="M0 0h7v15H0z" />
+        <use
+          fill="#000"
+          filter="url(#MD_svg_prefix__d)"
+          xlinkHref="#MD_svg_prefix__e"
+        />
+        <use fill="url(#MD_svg_prefix__f)" xlinkHref="#MD_svg_prefix__e" />
         <path
           d="M9 6h1l.5-1.5L11 6h1v3l-1.5 1L9 9V6zm1 1v1.5h1V7h-1z"
           fill="#AF7F59"
@@ -71,16 +97,14 @@ const MD = props => {
   );
 };
 
-MD.propTypes = {
+SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-
-MD.defaultProps = {
-  size: 15,
-  width: 21,
-  height: 15,
+SvgComponent.defaultProps = {
+  size: "15",
+  width: "21",
+  height: "15",
 };
-
-export default MD;
+export default SvgComponent;

@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const EG = props => {
-  let { size, width, height, ...otherProps } = props;
-
+const SvgComponent = ({ size, width, height, ...otherProps }) => {
   if (size !== height) {
     width = width * (size / height);
     height = height * (size / height);
@@ -13,32 +11,32 @@ const EG = props => {
     <svg
       width={width}
       height={height}
+      size={size}
       viewBox="0 0 21 15"
       {...otherProps}
-      xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="EG_svg_prefix__a">
           <stop stopColor="#FFF" offset="0%" />
           <stop stopColor="#F0F0F0" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="EG_svg_prefix__b">
           <stop stopColor="#E41D33" offset="0%" />
           <stop stopColor="#CE1126" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="EG_svg_prefix__c">
           <stop stopColor="#262626" offset="0%" />
           <stop stopColor="#0D0D0D" offset="100%" />
         </linearGradient>
       </defs>
       <g fill="none" fillRule="evenodd">
-        <path fill="url(#a)" d="M0 0h21v15H0z" />
-        <path fill="url(#b)" d="M0 0h21v5H0z" />
-        <path fill="url(#c)" d="M0 10h21v5H0z" />
-        <path fill="url(#a)" d="M0 5h21v5H0z" />
+        <path fill="url(#EG_svg_prefix__a)" d="M0 0h21v15H0z" />
+        <path fill="url(#EG_svg_prefix__b)" d="M0 0h21v5H0z" />
+        <path fill="url(#EG_svg_prefix__c)" d="M0 10h21v5H0z" />
+        <path fill="url(#EG_svg_prefix__a)" d="M0 5h21v5H0z" />
         <path
           d="M8 6.495C8 6.222 8.232 6 8.5 6h.248c.139 0 .298.092.368.232L9.5 7s.55-1 1-1c.5 0 1 1 1 1l.384-.768A.445.445 0 0112.252 6h.248c.276 0 .5.216.5.495v2.01c0 .273-.184.372-.41.222L11.5 8H11v.5c0 .276-.232.5-.5.5a.505.505 0 01-.5-.5V8h-.5l-1.09.727c-.226.15-.41.057-.41-.222v-2.01z"
-          fill-opacity=".25"
+          fillOpacity={0.25}
           fill="#F4B32E"
         />
         <path
@@ -51,16 +49,14 @@ const EG = props => {
   );
 };
 
-EG.propTypes = {
+SvgComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
-
-EG.defaultProps = {
-  size: 15,
-  width: 21,
-  height: 15,
+SvgComponent.defaultProps = {
+  size: "15",
+  width: "21",
+  height: "15"
 };
-
-export default EG;
+export default SvgComponent;
